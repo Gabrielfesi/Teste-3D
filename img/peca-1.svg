@@ -1,0 +1,10 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f0f0f0"/>
+  <rect x="75" y="75" width="150" height="25" fill="#95a5a6"/>
+  <rect x="85" y="100" width="130" height="25" fill="#7f8c8d"/>
+  <circle cx="100" cy="87" r="8" fill="#bdc3c7"/>
+  <circle cx="200" cy="87" r="8" fill="#bdc3c7"/>
+  <circle cx="100" cy="112" r="8" fill="#bdc3c7"/>
+  <circle cx="200" cy="112" r="8" fill="#bdc3c7"/>
+  <text x="150" y="170" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Suporte Estrutural</text>
+</svg> 

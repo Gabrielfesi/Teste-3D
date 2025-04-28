@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos Personalizados - UAI LAB 3D</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos específicos para a página de personalizados */
+        .personalization-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0 5rem;
+        }
+        
+        .step-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .step-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .step-card .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .step-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .custom-form {
+            background-color: var(--light-color);
+            padding: 3rem;
+            border-radius: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .file-upload {
+            border: 2px dashed #ddd;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .file-upload:hover {
+            border-color: var(--primary-color);
+        }
+        
+        .file-upload input[type="file"] {
+            display: none;
+        }
+        
+        .file-upload .upload-icon {
+            font-size: 3rem;
+            color: var(--gray-color);
+            margin-bottom: 1rem;
+        }
+        
+        .file-upload p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .file-upload .btn {
+            margin-top: 1rem;
+        }
+        
+        .file-preview {
+            margin-top: 1.5rem;
+            display: none;
+        }
+        
+        .file-preview.has-file {
+            display: block;
+        }
+        
+        .file-info {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 4px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .file-info i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-right: 1rem;
+        }
+        
+        .file-info span {
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .price-simulator {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .price-simulator h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .price-result {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-top: 1.5rem;
+        }
+        
+        .examples {
+            margin-top: 5rem;
+        }
+        
+        .examples h2 {
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>UAI LAB 3D</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="loja.html">Loja</a></li>
+                    <li><a href="personalizados.html" class="active">Personalizados</a></li>
+                    <li><a href="b2b.html">Para Empresas</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="cart-user">
+                <a href="carrinho.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                <a href="login.html" class="user-icon"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="custom-hero">
+        <div class="container">
+            <h1 class="section-title">Personalize Seu Produto</h1>
+            <p class="section-description">Transforme suas ideias em realidade com nossa impressão 3D personalizada. Envie seu arquivo, escolha o material e deixe o resto conosco.</p>
+        </div>
+    </section>
+
+    <section class="custom-steps">
+        <div class="container">
+            <h2 class="section-title">Como Funciona</h2>
+            <div class="personalization-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Envie seu Arquivo</h3>
+                    <p>Faça upload do arquivo 3D no formato STL ou OBJ com seu design personalizado.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Escolha o Material</h3>
+                    <p>Selecione entre diversos materiais e cores para seu produto final.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Avalie o Orçamento</h3>
+                    <p>Receba o orçamento automático com base no tamanho e material escolhido.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Confirmação e Produção</h3>
+                    <p>Após a confirmação, produzimos e enviamos seu produto personalizado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="custom-form-section">
+        <div class="container">
+            <h2 class="section-title">Crie Seu Produto</h2>
+            
+            <div class="custom-form">
+                <form id="personalization-form">
+                    <div class="form-group">
+                        <label for="fileUpload">Seu Arquivo 3D</label>
+                        <div class="file-upload">
+                            <input type="file" id="fileUpload" accept=".stl,.obj">
+                            <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                            <p>Arraste e solte seu arquivo STL ou OBJ aqui</p>
+                            <p><small>Ou</small></p>
+                            <label for="fileUpload" class="btn primary">Selecionar Arquivo</label>
+                            <div class="file-preview"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="material">Material</label>
+                            <select id="material" required>
+                                <option value="">Selecione o material</option>
+                                <option value="pla">PLA - Plástico Biodegradável</option>
+                                <option value="abs">ABS - Alta Resistência</option>
+                                <option value="petg">PETG - Resistente à Água</option>
+                                <option value="tpu">TPU - Flexível</option>
+                                <option value="resin">Resina - Alta Definição</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="color">Cor</label>
+                            <select id="color" required>
+                                <option value="">Selecione a cor</option>
+                                <option value="white">Branco</option>
+                                <option value="black">Preto</option>
+                                <option value="gray">Cinza</option>
+                                <option value="blue">Azul</option>
+                                <option value="red">Vermelho</option>
+                                <option value="green">Verde</option>
+                                <option value="yellow">Amarelo</option>
+                                <option value="transparent">Transparente (disponível apenas para PETG e Resina)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="quality">Qualidade de Impressão</label>
+                            <select id="quality" required>
+                                <option value="">Selecione a qualidade</option>
+                                <option value="low">Padrão (0.2mm)</option>
+                                <option value="medium">Alta (0.1mm)</option>
+                                <option value="high">Premium (0.05mm)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="quantity">Quantidade</label>
+                            <input type="number" id="quantity" min="1" value="1" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="comments">Comentários Adicionais</label>
+                        <textarea id="comments" placeholder="Descreva detalhes específicos sobre seu projeto ou requisitos especiais..."></textarea>
+                    </div>
+                    
+                    <div class="price-simulator">
+                        <h3>Simulação de Preço</h3>
+                        <p>O preço final será calculado com precisão após a análise do arquivo, mas você pode obter uma estimativa baseada nas opções escolhidas.</p>
+                        <button type="button" class="btn secondary" id="calculate-btn">Calcular Estimativa</button>
+                        <div class="price-result" id="price-result"></div>
+                    </div>
+                    
+                    <div class="form-group" style="margin-top: 2rem; text-align: center;">
+                        <button type="submit" class="btn primary">Enviar Pedido</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="custom-examples">
+        <div class="container">
+            <h2>Exemplos de Projetos Personalizados</h2>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <img src="https://cdn.shopify.com/s/files/1/0642/7853/articles/20210212_143047_1024x1024.jpg?v=1613268633" alt="Troféu Personalizado">
+                    <h3>Troféu Personalizado</h3>
+                    <p>Troféus únicos criados para premiações corporativas e eventos esportivos.</p>
+                </div>
+                <div class="example-card">
+                    <img src="https://blog.stratasys.com/wp-content/uploads/2017/11/anatomic-models-medical-service-visual.jpg" alt="Modelo Médico Personalizado">
+                    <h3>Modelo Médico Personalizado</h3>
+                    <p>Modelos anatômicos precisos para planejamento cirúrgico e educação médica.</p>
+                </div>
+                <div class="example-card">
+                    <img src="https://cdn.thewirecutter.com/wp-content/media/2021/03/3dprinting-2048px-0L1A2111-2.jpg" alt="Presentes Personalizados">
+                    <h3>Presentes Personalizados</h3>
+                    <p>Itens exclusivos para datas especiais, com design único e personalizado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>UAI LAB 3D</h3>
+                    <p>Transformando ideias em realidade desde 2020. Especialistas em impressão 3D para pessoas e empresas.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="loja.html">Loja</a></li>
+                        <li><a href="personalizados.html">Personalizados</a></li>
+                        <li><a href="b2b.html">Para Empresas</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Tecnologia, 1500 - São Paulo, SP</li>
+                        <li><i class="fas fa-phone"></i> (11) 3456-7890</li>
+                        <li><i class="fas fa-envelope"></i> contato@ualab3d.com.br</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Receba novidades e promoções exclusivas:</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu e-mail">
+                        <button type="submit" class="btn primary">Assinar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 UAI LAB 3D. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="whatsapp-button">
+        <a href="https://wa.me/5511987654321" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Simulador de preço para produtos personalizados
+        document.addEventListener('DOMContentLoaded', function() {
+            const calculateBtn = document.getElementById('calculate-btn');
+            const priceResult = document.getElementById('price-result');
+            
+            if (calculateBtn && priceResult) {
+                calculateBtn.addEventListener('click', function() {
+                    // Obter valores do formulário
+                    const material = document.getElementById('material').value;
+                    const quality = document.getElementById('quality').value;
+                    const quantity = parseInt(document.getElementById('quantity').value) || 1;
+                    
+                    if (!material || !quality) {
+                        alert('Por favor, selecione o material e a qualidade de impressão.');
+                        return;
+                    }
+                    
+                    // Simulação de cálculo de preço
+                    // Valores base por material
+                    let basePrice = 0;
+                    switch (material) {
+                        case 'pla':
+                            basePrice = 80;
+                            break;
+                        case 'abs':
+                            basePrice = 90;
+                            break;
+                        case 'petg':
+                            basePrice = 100;
+                            break;
+                        case 'tpu':
+                            basePrice = 120;
+                            break;
+                        case 'resin':
+                            basePrice = 150;
+                            break;
+                        default:
+                            basePrice = 80;
+                    }
+                    
+                    // Multiplicador de qualidade
+                    let qualityMultiplier = 1;
+                    switch (quality) {
+                        case 'low':
+                            qualityMultiplier = 1;
+                            break;
+                        case 'medium':
+                            qualityMultiplier = 1.5;
+                            break;
+                        case 'high':
+                            qualityMultiplier = 2;
+                            break;
+                        default:
+                            qualityMultiplier = 1;
+                    }
+                    
+                    // Cálculo final
+                    const estimatedPrice = basePrice * qualityMultiplier * quantity;
+                    
+                    // Exibir resultado
+                    priceResult.textContent = `Estimativa: R$ ${estimatedPrice.toFixed(2)}`;
+                    priceResult.style.display = 'block';
+                });
+            }
+            
+            // Configuração de upload de arquivo
+            const fileUpload = document.querySelector('.file-upload');
+            const fileInput = document.getElementById('fileUpload');
+            const filePreview = document.querySelector('.file-preview');
+            
+            if (fileUpload && fileInput && filePreview) {
+                // Permitir arrastar e soltar
+                fileUpload.addEventListener('dragover', function(e) {
+                    e.preventDefault();
+                    fileUpload.style.borderColor = '#0066cc'; // Cor primária definida
+                });
+                
+                fileUpload.addEventListener('dragleave', function() {
+                    fileUpload.style.borderColor = '#ddd';
+                });
+                
+                fileUpload.addEventListener('drop', function(e) {
+                    e.preventDefault();
+                    fileUpload.style.borderColor = '#ddd';
+                    
+                    if (e.dataTransfer.files.length) {
+                        fileInput.files = e.dataTransfer.files;
+                        handleFile(e.dataTransfer.files[0]);
+                    }
+                });
+                
+                fileInput.addEventListener('change', function() {
+                    if (fileInput.files.length) {
+                        handleFile(fileInput.files[0]);
+                    }
+                });
+                
+                function handleFile(file) {
+                    // Verificar extensão
+                    const extension = file.name.split('.').pop().toLowerCase();
+                    if (extension === 'stl' || extension === 'obj') {
+                        const fileName = file.name;
+                        filePreview.innerHTML = `
+                            <div class="file-info">
+                                <i class="fas fa-file-code"></i>
+                                <span>${fileName}</span>
+                                <small>(${(file.size / (1024 * 1024)).toFixed(2)} MB)</small>
+                            </div>
+                        `;
+                        filePreview.classList.add('has-file');
+                    } else {
+                        alert('Por favor, envie apenas arquivos STL ou OBJ.');
+                        fileInput.value = '';
+                    }
+                }
+                
+                // Formulário de envio
+                const form = document.getElementById('personalization-form');
+                if (form) {
+                    form.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        
+                        if (!fileInput.files.length) {
+                            alert('Por favor, faça upload de um arquivo 3D.');
+                            return;
+                        }
+                        
+                        const submitButton = form.querySelector('button[type="submit"]');
+                        const originalText = submitButton.textContent;
+                        submitButton.disabled = true;
+                        submitButton.textContent = 'Enviando...';
+                        
+                        // Simular envio do formulário
+                        setTimeout(function() {
+                            form.reset();
+                            filePreview.innerHTML = '';
+                            filePreview.classList.remove('has-file');
+                            priceResult.textContent = '';
+                            
+                            alert('Seu pedido foi enviado com sucesso! Entraremos em contato em breve com a confirmação.');
+                            
+                            submitButton.disabled = false;
+                            submitButton.textContent = originalText;
+                        }, 2000);
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html> 

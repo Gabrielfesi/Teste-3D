@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja - UAI LAB 3D</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos específicos para a página da loja */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 3rem;
+        }
+        
+        .filter-button {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 8px 16px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .filter-button.active, .filter-button:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .product-grid {
+            margin-bottom: 3rem;
+        }
+        
+        .add-to-cart {
+            margin-top: 10px;
+        }
+        
+        .custom-order {
+            background-color: var(--light-color);
+            padding: 3rem;
+            border-radius: 10px;
+            margin-top: 5rem;
+            text-align: center;
+        }
+        
+        .custom-order h3 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .custom-order p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .add-to-cart-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4caf50;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 9999;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        
+        .add-to-cart-notification.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>UAI LAB 3D</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="loja.html" class="active">Loja</a></li>
+                    <li><a href="personalizados.html">Personalizados</a></li>
+                    <li><a href="b2b.html">Para Empresas</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="cart-user">
+                <a href="carrinho.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                <a href="login.html" class="user-icon"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="shop-hero">
+        <div class="container">
+            <h1 class="section-title">Nossa Loja</h1>
+            <p class="section-description">Explore nossa seleção de produtos impressos em 3D de alta qualidade. Todos os itens são personalizáveis e produzidos com materiais premium.</p>
+        </div>
+    </section>
+
+    <section class="shop-products">
+        <div class="container">
+            <div class="filter-container">
+                <button class="filter-button active" data-category="all">Todos</button>
+                <button class="filter-button" data-category="decoracao">Decoração</button>
+                <button class="filter-button" data-category="utilidades">Utilidades</button>
+                <button class="filter-button" data-category="suportes">Suportes</button>
+                <button class="filter-button" data-category="miniaturas">Miniaturas</button>
+                <button class="filter-button" data-category="organizadores">Organizadores</button>
+            </div>
+
+            <div class="product-grid">
+                <!-- Decoração -->
+                <div class="product-card" data-category="decoracao">
+                    <div class="product-image">
+                        <img src="https://things.3dfila.com.br/img/53229.jpg" alt="Vaso Geométrico Moderno">
+                    </div>
+                    <h3>Vaso Geométrico Moderno</h3>
+                    <p class="price">R$ 129,90</p>
+                    <a href="#" class="btn primary add-to-cart">Adicionar ao Carrinho</a>
+                </div>
+                
+                <div class="product-card" data-category="decoracao">
+                    <div class="product-image">
+                        <img src="https://things.3dfila.com.br/img/53505.jpg" alt="Porta-Retrato 3D">
+                    </div>
+                    <h3>Porta-Retrato 3D</h3>
+                    <p class="price">R$ 99,90</p>
+                    <a href="#" class="btn primary add-to-cart">Adicionar ao Carrinho</a>
+                </div>
+                
+                <!-- Utilidades -->
+                <div class="product-card" data-category="utilidades">
+                    <div class="product-image">
+                        <img src="https://storage.googleapis.com/thehomeissue/2021/10/e5ae3cb6-3d-printed-desk-organizer.webp" alt="Organizador de Mesa">
+                    </div>
+                    <h3>Organizador de Mesa</h3>
+                    <p class="price">R$ 89,90</p>
+                    <a href="#" class="btn primary add-to-cart">Adicionar ao Carrinho</a>
+                </div>
+                
+                <div class="product-card" data-category="utilidades">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/originals/ac/f8/82/acf882ecb9a0bdcbbc85f4146d6d088a.jpg" alt="Porta-Joias Personalizado">
+                    </div>
+                    <h3>Porta-Joias Personalizado</h3>
+                    <p class="price">R$ 149,90</p>
+                    <a href="#" class="btn primary add-to-cart">Adicionar ao Carrinho</a>
+                </div>
+                
+                <!-- Suportes -->
+                <div class="product-card" data-category="suportes">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/originals/21/f2/7c/21f27c5c9a5fe8c531b569d13beb0da8.jpg" alt="Suporte para Smartphone">
+                    </div>
+                    <h3>Suporte para Smartphone</h3>
+                    <p class="price">R$ 59,90</p>
+                    <a href="#" class="btn primary add-to-cart">Adicionar ao Carrinho</a>
+                </div>
+                
+                <div class="product-card" data-category="suportes">
+                    <div class="product-image">
+                        <img src="https://i.etsystatic.com/26890051/r/il/0c3e9f/3224346632/il_570xN.3224346632_rrzm.jpg" alt="Suporte para Fones de Ouvido">
+                    </div>
+                    <h3>Suporte para Fones de Ouvido</h3>
+                    <p class="price">R$ 79,90</p>
+                    <a href="#" class="btn primary add-to-cart">Adicionar ao Carrinho</a>
+                </div>
+                
+                <!-- Miniaturas -->
+                <div class="product-card" data-category="miniaturas">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/originals/b9/d7/2c/b9d72c76d6bc86d15fb23e5a8427cc8f.jpg" alt="Miniatura Arquitetônica">
+                    </div>
+                    <h3>Miniatura Arquitetônica</h3>
+                    <p class="price">R$ 199,90</p>
+                    <a href="#" class="btn primary add-to-cart">Adicionar ao Carrinho</a>
+                </div>
+                
+                <div class="product-card" data-category="miniaturas">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/originals/62/56/b6/6256b6be4392ebec18a76a33f44606be.jpg" alt="Busto Decorativo">
+                    </div>
+                    <h3>Busto Decorativo</h3>
+                    <p class="price">R$ 169,90</p>
+                    <a href="#" class="btn primary add-to-cart">Adicionar ao Carrinho</a>
+                </div>
+                
+                <!-- Organizadores -->
+                <div class="product-card" data-category="organizadores">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/originals/9d/f9/66/9df9669bbfefac78b54ae8cce22ab058.jpg" alt="Organizador de Cabos">
+                    </div>
+                    <h3>Organizador de Cabos</h3>
+                    <p class="price">R$ 49,90</p>
+                    <a href="#" class="btn primary add-to-cart">Adicionar ao Carrinho</a>
+                </div>
+                
+                <div class="product-card" data-category="organizadores">
+                    <div class="product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGRolbL_YMCdlXC_lR6hfcDFIWYnazNCNfgA&usqp=CAU" alt="Caixa Organizadora Modular">
+                    </div>
+                    <h3>Caixa Organizadora Modular</h3>
+                    <p class="price">R$ 119,90</p>
+                    <a href="#" class="btn primary add-to-cart">Adicionar ao Carrinho</a>
+                </div>
+            </div>
+            
+            <div class="custom-order">
+                <h3>Monte seu Produto Personalizado</h3>
+                <p>Tem um projeto em mente? Faça o upload do seu arquivo 3D e personalize as opções de impressão.</p>
+                <a href="personalizados.html" class="btn primary">Personalizar Produto</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>UAI LAB 3D</h3>
+                    <p>Transformando ideias em realidade desde 2020. Especialistas em impressão 3D para pessoas e empresas.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="loja.html">Loja</a></li>
+                        <li><a href="personalizados.html">Personalizados</a></li>
+                        <li><a href="b2b.html">Para Empresas</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Tecnologia, 1500 - São Paulo, SP</li>
+                        <li><i class="fas fa-phone"></i> (11) 3456-7890</li>
+                        <li><i class="fas fa-envelope"></i> contato@ualab3d.com.br</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Receba novidades e promoções exclusivas:</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu e-mail">
+                        <button type="submit" class="btn primary">Assinar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 UAI LAB 3D. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="whatsapp-button">
+        <a href="https://wa.me/5511987654321" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

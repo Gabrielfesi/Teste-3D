@@ -1,0 +1,10 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f0f0f0"/>
+  <rect x="120" y="80" width="60" height="80" fill="#3498db"/>
+  <rect x="130" y="60" width="40" height="20" fill="#3498db"/>
+  <rect x="140" y="40" width="20" height="20" fill="#3498db"/>
+  <path d="M 120 120 L 180 120" stroke="#2980b9" stroke-width="2"/>
+  <path d="M 130 100 L 170 100" stroke="#2980b9" stroke-width="2"/>
+  <path d="M 140 80 L 160 80" stroke="#2980b9" stroke-width="2"/>
+  <text x="150" y="180" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Torre Geométrica</text>
+</svg> 

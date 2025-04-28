@@ -1,0 +1,10 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f0f0f0"/>
+  <circle cx="200" cy="120" r="70" fill="#3498db"/>
+  <circle cx="200" cy="100" r="30" fill="#ecf0f1"/>
+  <path d="M 160 160 Q 200 200 240 160" stroke="#ecf0f1" stroke-width="8" fill="none"/>
+  <circle cx="180" cy="90" r="5" fill="#2c3e50"/>
+  <circle cx="220" cy="90" r="5" fill="#2c3e50"/>
+  <text x="200" y="250" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Pedro Silva</text>
+  <text x="200" y="270" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Usuário da prótese personalizada</text>
+</svg> 
