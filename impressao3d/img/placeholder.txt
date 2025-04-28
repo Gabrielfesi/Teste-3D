@@ -1,0 +1,46 @@
+# Imagens necessárias para o site UAI LAB 3D
+
+## Imagens de produtos:
+- produto1.jpg: Vaso geométrico moderno com padrão hexagonal em filamento PLA azul
+- produto2.jpg: Porta-retrato 3D com design moderno e personalizado
+- produto3.jpg: Organizador de mesa com compartimentos para canetas e acessórios
+- produto4.jpg: Porta-joias personalizado com detalhes decorativos
+- produto5.jpg: Suporte para smartphone com design ergonômico
+- produto6.jpg: Suporte para fones de ouvido em formato minimalista
+- produto7.jpg: Miniatura arquitetônica detalhada de um edifício
+- produto8.jpg: Busto decorativo de personagem ou figura histórica
+- produto9.jpg: Organizador de cabos com design prático
+- produto10.jpg: Caixa organizadora modular com compartimentos customizáveis
+
+## Imagens de clientes e seus depoimentos:
+- cliente1.jpg: Foto de Ricardo Souza, arquiteto
+- cliente2.jpg: Foto de Ana Carolina, gerente de produto
+- cliente3.jpg: Foto de Marcelo Lima, designer
+
+## Imagens de projetos personalizados:
+- personalizado1.jpg: Maquete arquitetônica detalhada
+- personalizado2.jpg: Miniaturas personalizadas de personagens
+- personalizado3.jpg: Peças de reposição técnicas
+- personalizado4.jpg: Protótipos de produtos em desenvolvimento
+
+## Imagens para a seção B2B:
+- b2b-prototipagem.jpg: Imagem mostrando processo de prototipagem com impressora 3D
+- b2b-pecas.jpg: Peças de reposição industrial produzidas com impressão 3D
+- b2b-producao.jpg: Ambiente de produção com múltiplas impressoras 3D
+- b2b-consultoria.jpg: Consultoria técnica com profissionais analisando modelos 3D
+
+## Logos de clientes para seção B2B:
+- cliente1-logo.jpg: Logo de empresa cliente
+- cliente2-logo.jpg: Logo de empresa cliente
+- cliente3-logo.jpg: Logo de empresa cliente
+- cliente4-logo.jpg: Logo de empresa cliente
+- cliente5-logo.jpg: Logo de empresa cliente
+- cliente6-logo.jpg: Logo de empresa cliente
+
+## Imagens de fundo:
+- hero-bg.jpg: Imagem de fundo para o hero, mostrando impressoras 3D em operação
+- cta-bg.jpg: Imagem de fundo para a seção call-to-action
+
+Obs: Para um site real, estas imagens deveriam ser criadas por um fotógrafo profissional 
+ou designer, capturando os produtos reais da empresa. As imagens deveriam ter tamanho adequado, 
+boa resolução e seguir a identidade visual da UAI LAB 3D. 

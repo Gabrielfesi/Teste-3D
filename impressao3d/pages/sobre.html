@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Impressões 3D do Gabriel</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .about-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1200x400/252525/FFFFFF/png?text=Impressões+3D+do+Gabriel');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+        
+        .about-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .about-section {
+            padding: 40px 0;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text h2 {
+            color: #1e88e5;
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+            color: #555;
+        }
+        
+        .mission-vision {
+            background-color: #f9f9f9;
+            padding: 60px 0;
+            margin: 40px 0;
+        }
+        
+        .mission-vision-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+        }
+        
+        .mission-box, .vision-box {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .mission-box h3, .vision-box h3 {
+            color: #1e88e5;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .mission-box h3 i, .vision-box h3 i {
+            margin-right: 10px;
+            color: #1e88e5;
+        }
+        
+        .team-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .team-section h2 {
+            color: #1e88e5;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .team-member {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+        
+        .team-member img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .member-info {
+            padding: 20px;
+        }
+        
+        .member-info h3 {
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .member-info p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .member-social {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .member-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: #f5f5f5;
+            border-radius: 50%;
+            color: #1e88e5;
+            transition: all 0.3s ease;
+        }
+        
+        .member-social a:hover {
+            background: #1e88e5;
+            color: white;
+        }
+        
+        .cta-section {
+            background: linear-gradient(to right, #1e88e5, #115293);
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+            margin: 60px 0;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: white;
+            color: #1e88e5;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background: rgba(255,255,255,0.9);
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column-reverse;
+            }
+            
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Impressões 3D do Gabriel</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="materiais.html">Materiais</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="sobre.html" class="active">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>Sobre a Impressões 3D do Gabriel</h1>
+            <p>Conheça nossa história, valores e a equipe por trás da inovação em impressão 3D</p>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://placehold.co/600x400/1e88e5/FFFFFF/png?text=Nossa+História" alt="História da Impressões 3D do Gabriel">
+                </div>
+                <div class="about-text">
+                    <h2>Nossa História</h2>
+                    <p>Fundada em 2019 em Belo Horizonte, a Impressões 3D do Gabriel nasceu da paixão pela tecnologia e inovação de Gabriel Silva, um engenheiro que acreditava no potencial transformador da impressão 3D para solucionar problemas do dia a dia.</p>
+                    <p>Começamos como um pequeno laboratório experimental, atendendo projetos acadêmicos e pequenos protótipos para inventores locais. Com o tempo, nossa expertise e capacidade de produção cresceram, permitindo-nos expandir para diversos setores como saúde, educação, engenharia e design.</p>
+                    <p>Hoje, a Impressões 3D do Gabriel é reconhecida como um dos principais centros de impressão 3D de Minas Gerais, combinando tecnologia de ponta com atendimento personalizado e dedicado.</p>
+                </div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>O Que Nos Move</h2>
+                    <p>Na Impressões 3D do Gabriel, acreditamos que a tecnologia de impressão 3D pode democratizar o acesso à fabricação personalizada e resolver problemas reais da sociedade. Trabalhamos incansavelmente para tornar essa tecnologia acessível a estudantes, profissionais, empresas e instituições.</p>
+                    <p>Nossa abordagem combina rigor técnico com criatividade, buscando sempre as melhores soluções para cada desafio que nossos clientes apresentam. Valorizamos a sustentabilidade em nossos processos, utilizando materiais biodegradáveis sempre que possível e otimizando nossos recursos para reduzir desperdícios.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://placehold.co/600x400/1e88e5/FFFFFF/png?text=Nossa+Missão" alt="O que nos move">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Mission and Vision -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="mission-vision-content">
+                <div class="mission-box">
+                    <h3><i class="fas fa-bullseye"></i> Nossa Missão</h3>
+                    <p>Democratizar o acesso à tecnologia de impressão 3D, transformando ideias em soluções tangíveis que impactam positivamente a vida das pessoas e contribuem para o desenvolvimento tecnológico do Brasil.</p>
+                </div>
+                <div class="vision-box">
+                    <h3><i class="fas fa-eye"></i> Nossa Visão</h3>
+                    <p>Ser referência nacional em soluções inovadoras de impressão 3D, reconhecida pela excelência técnica, compromisso com a sustentabilidade e capacidade de transformar desafios complexos em projetos bem-sucedidos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2>Nossa Equipe</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://placehold.co/400x400/252525/FFFFFF/png?text=Gabriel" alt="Gabriel Silva">
+                    <div class="member-info">
+                        <h3>Gabriel Silva</h3>
+                        <p>Fundador e Diretor Técnico</p>
+                        <p>Engenheiro Mecânico com especialização em manufatura aditiva, Gabriel lidera a equipe técnica e supervisiona os projetos mais complexos.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="far fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://placehold.co/400x400/252525/FFFFFF/png?text=Marina" alt="Marina Oliveira">
+                    <div class="member-info">
+                        <h3>Marina Oliveira</h3>
+                        <p>Fundadora e Diretora de Inovação</p>
+                        <p>Engenheira de Materiais com vasta experiência em P&D, Marina está à frente do desenvolvimento de novas aplicações e materiais para impressão 3D.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="far fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://placehold.co/400x400/252525/FFFFFF/png?text=Lucas" alt="Lucas Mendes">
+                    <div class="member-info">
+                        <h3>Lucas Mendes</h3>
+                        <p>Designer 3D Sênior</p>
+                        <p>Especialista em modelagem 3D e design industrial, Lucas transforma conceitos em modelos tridimensionais impressionantes e funcionais.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="far fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://placehold.co/400x400/252525/FFFFFF/png?text=Juliana" alt="Juliana Santos">
+                    <div class="member-info">
+                        <h3>Juliana Santos</h3>
+                        <p>Especialista em Projetos Médicos</p>
+                        <p>Com formação em bioengenharia, Juliana coordena nossos projetos na área de saúde, incluindo próteses personalizadas e modelos anatômicos.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-researchgate"></i></a>
+                            <a href="#"><i class="far fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Vamos criar algo incrível juntos</h2>
+            <p>Seja qual for seu projeto ou ideia, estamos prontos para transformá-lo em realidade usando o poder da impressão 3D. Entre em contato conosco hoje mesmo e descubra como podemos ajudar.</p>
+            <a href="contato.html" class="cta-button">Fale Conosco</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Impressões 3D do Gabriel</h2>
+                    <p>Transformando ideias em realidade</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Tecnologia, 1000 - Belo Horizonte, MG</p>
+                    <p><i class="fas fa-phone"></i> (31) 3333-3333</p>
+                    <p><i class="fas fa-envelope"></i> contato@gabriel3d.com.br</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Impressões 3D do Gabriel. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,33 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#f0f0f0"/>
+  
+  <!-- Engrenagens -->
+  <circle cx="200" cy="200" r="80" fill="#95a5a6"/>
+  <circle cx="200" cy="200" r="60" fill="#7f8c8d"/>
+  <circle cx="200" cy="200" r="20" fill="#bdc3c7"/>
+  
+  <!-- Dentes da engrenagem -->
+  <rect x="195" y="120" width="10" height="20" fill="#95a5a6"/>
+  <rect x="195" y="260" width="10" height="20" fill="#95a5a6"/>
+  <rect x="120" y="195" width="20" height="10" fill="#95a5a6"/>
+  <rect x="260" y="195" width="20" height="10" fill="#95a5a6"/>
+  
+  <rect x="150" y="130" width="20" height="10" transform="rotate(45, 150, 130)" fill="#95a5a6"/>
+  <rect x="250" y="130" width="20" height="10" transform="rotate(-45, 250, 130)" fill="#95a5a6"/>
+  <rect x="150" y="270" width="20" height="10" transform="rotate(-45, 150, 270)" fill="#95a5a6"/>
+  <rect x="250" y="270" width="20" height="10" transform="rotate(45, 250, 270)" fill="#95a5a6"/>
+  
+  <!-- Segunda engrenagem menor -->
+  <circle cx="380" cy="200" r="50" fill="#3498db"/>
+  <circle cx="380" cy="200" r="35" fill="#2980b9"/>
+  <circle cx="380" cy="200" r="15" fill="#a8d8ff"/>
+  
+  <!-- Dentes da segunda engrenagem -->
+  <rect x="377" y="150" width="6" height="15" fill="#3498db"/>
+  <rect x="377" y="235" width="6" height="15" fill="#3498db"/>
+  <rect x="330" y="197" width="15" height="6" fill="#3498db"/>
+  <rect x="415" y="197" width="15" height="6" fill="#3498db"/>
+  
+  <text x="300" y="50" font-family="Arial" font-size="20" text-anchor="middle" fill="#333">Peças Funcionais</text>
+  <text x="300" y="350" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Componentes duráveis para diversos equipamentos</text>
+</svg> 
