@@ -1,9 +1,0 @@
-<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect width="300" height="200" fill="#f0f0f0"/>
-  <polygon points="150,50 180,80 180,150 120,150 120,80" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
-  <path d="M 120 100 L 180 100" stroke="#8e44ad" stroke-width="2"/>
-  <path d="M 120 120 L 180 120" stroke="#8e44ad" stroke-width="2"/>
-  <path d="M 140 80 L 140 150" stroke="#8e44ad" stroke-width="2"/>
-  <path d="M 160 80 L 160 150" stroke="#8e44ad" stroke-width="2"/>
-  <text x="150" y="180" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Vaso Decorativo</text>
-</svg> 

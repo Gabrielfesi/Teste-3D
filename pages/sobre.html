@@ -7,31 +7,32 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* Estilos específicos para a página sobre nós */
         .about-hero {
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1200x400/252525/FFFFFF/png?text=Impressões+3D+do+Gabriel');
             background-size: cover;
             background-position: center;
-            padding: 100px 0;
+            padding: 5rem 0;
             text-align: center;
             color: white;
-            margin-bottom: 60px;
+            margin-bottom: 3rem;
         }
         
         .about-hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
         }
         
         .about-section {
-            padding: 40px 0;
+            padding: 3rem 0;
         }
         
         .about-content {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            gap: 40px;
-            margin-bottom: 60px;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
         }
         
         .about-image {
@@ -42,7 +43,7 @@
         .about-image img {
             width: 100%;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: var(--box-shadow);
         }
         
         .about-text {
@@ -51,27 +52,27 @@
         }
         
         .about-text h2 {
-            color: #1e88e5;
-            margin-bottom: 20px;
-            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.25rem;
+            font-size: 2rem;
         }
         
         .about-text p {
-            margin-bottom: 15px;
+            margin-bottom: 1rem;
             line-height: 1.7;
-            color: #555;
+            color: var(--gray-color);
         }
         
         .mission-vision {
-            background-color: #f9f9f9;
-            padding: 60px 0;
-            margin: 40px 0;
+            background-color: var(--light-color);
+            padding: 4rem 0;
+            margin: 3rem 0;
         }
         
         .mission-vision-content {
             display: flex;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 2rem;
             justify-content: space-between;
         }
         
@@ -79,51 +80,52 @@
             flex: 1;
             min-width: 300px;
             background: white;
-            padding: 30px;
+            padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: var(--box-shadow);
         }
         
         .mission-box h3, .vision-box h3 {
-            color: #1e88e5;
-            margin-bottom: 15px;
-            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
             display: flex;
             align-items: center;
         }
         
         .mission-box h3 i, .vision-box h3 i {
-            margin-right: 10px;
-            color: #1e88e5;
+            margin-right: 0.75rem;
+            color: var(--primary-color);
         }
         
         .team-section {
-            padding: 60px 0;
+            padding: 4rem 0;
             text-align: center;
         }
         
         .team-section h2 {
-            color: #1e88e5;
-            margin-bottom: 40px;
-            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 2.5rem;
+            font-size: 2rem;
         }
         
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 30px;
+            gap: 2rem;
         }
         
         .team-member {
             background: white;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
         }
         
         .team-member:hover {
             transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
         
         .team-member img {
@@ -133,24 +135,24 @@
         }
         
         .member-info {
-            padding: 20px;
+            padding: 1.5rem;
         }
         
         .member-info h3 {
-            margin-bottom: 5px;
-            color: #333;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
         }
         
         .member-info p {
-            color: #666;
-            margin-bottom: 10px;
+            color: var(--gray-color);
+            margin-bottom: 0.75rem;
         }
         
         .member-social {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin-top: 15px;
+            gap: 0.75rem;
+            margin-top: 1rem;
         }
         
         .member-social a {
@@ -159,32 +161,32 @@
             justify-content: center;
             width: 36px;
             height: 36px;
-            background: #f5f5f5;
+            background: var(--light-color);
             border-radius: 50%;
-            color: #1e88e5;
-            transition: all 0.3s ease;
+            color: var(--primary-color);
+            transition: var(--transition);
         }
         
         .member-social a:hover {
-            background: #1e88e5;
+            background: var(--primary-color);
             color: white;
         }
         
         .cta-section {
-            background: linear-gradient(to right, #1e88e5, #115293);
-            padding: 60px 0;
+            background: linear-gradient(to right, var(--primary-color), #004fa3);
+            padding: 4rem 0;
             text-align: center;
             color: white;
-            margin: 60px 0;
+            margin: 4rem 0;
         }
         
         .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 2.2rem;
+            margin-bottom: 1.25rem;
         }
         
         .cta-section p {
-            margin-bottom: 30px;
+            margin-bottom: 2rem;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
@@ -192,31 +194,50 @@
         
         .cta-button {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 0.75rem 2rem;
             background: white;
-            color: #1e88e5;
+            color: var(--primary-color);
             text-decoration: none;
             border-radius: 50px;
-            font-weight: bold;
-            transition: all 0.3s ease;
+            font-weight: 600;
+            transition: var(--transition);
         }
         
         .cta-button:hover {
-            background: rgba(255,255,255,0.9);
+            background: rgba(255, 255, 255, 0.9);
             transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        @media (max-width: 992px) {
+            .about-content, 
+            .mission-vision-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                order: -1;
+            }
         }
         
         @media (max-width: 768px) {
-            .about-content {
-                flex-direction: column-reverse;
-            }
-            
             .about-hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
             
+            .about-text h2,
+            .team-section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
             .team-grid {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -224,22 +245,7 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Impressões 3D do Gabriel</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
-                    <li><a href="projetos.html">Projetos</a></li>
-                    <li><a href="materiais.html">Materiais</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="sobre.html" class="active">Sobre</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
+        <!-- O conteúdo do cabeçalho será inserido via JavaScript -->
     </header>
     
     <!-- Hero Section -->
@@ -369,44 +375,10 @@
     
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h2>Impressões 3D do Gabriel</h2>
-                    <p>Transformando ideias em realidade</p>
-                </div>
-                <div class="footer-contact">
-                    <h3>Contato</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Av. Tecnologia, 1000 - Belo Horizonte, MG</p>
-                    <p><i class="fas fa-phone"></i> (31) 3333-3333</p>
-                    <p><i class="fas fa-envelope"></i> contato@gabriel3d.com.br</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Links Rápidos</h3>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="servicos.html">Serviços</a></li>
-                        <li><a href="projetos.html">Projetos</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h3>Redes Sociais</h3>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Impressões 3D do Gabriel. Todos os direitos reservados.</p>
-            </div>
-        </div>
+        <!-- O conteúdo do rodapé será inserido via JavaScript -->
     </footer>
+    <script src="../js/header.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html> 

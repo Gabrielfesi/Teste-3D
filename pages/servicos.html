@@ -6,25 +6,218 @@
     <title>Serviços - Impressões 3D do Gabriel</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos específicos para a página de serviços */
+        .services-hero {
+            background-color: var(--light-color);
+            padding: 5rem 0;
+        }
+        
+        .services-hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 3rem;
+        }
+        
+        .services-hero-content {
+            flex: 1;
+        }
+        
+        .services-hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .services-hero-content p {
+            font-size: 1.1rem;
+            color: var(--gray-color);
+        }
+        
+        .services-hero-image {
+            flex: 1;
+        }
+        
+        .services-hero-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .service-detailed {
+            padding: 5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .service-detailed:last-child {
+            border-bottom: none;
+        }
+        
+        .service-detailed .container {
+            display: flex;
+            gap: 4rem;
+        }
+        
+        .service-content, .service-images {
+            flex: 1;
+        }
+        
+        .service-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .service-content p {
+            color: var(--gray-color);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        
+        .service-benefits, .service-process, .service-applications, .service-materials {
+            margin-bottom: 2rem;
+        }
+        
+        .service-benefits h3, .service-process h3, 
+        .service-applications h3, .service-materials h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        .service-benefits ul, .service-applications ul, .service-types ul {
+            padding-left: 1.5rem;
+        }
+        
+        .service-benefits li, .service-applications li, .service-types li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            list-style: none;
+        }
+        
+        .service-benefits li:before, .service-applications li:before, .service-types li:before {
+            content: '\f058';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: -1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .process-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .step-content h4 {
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .step-content p {
+            margin-bottom: 0;
+        }
+        
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .material-item {
+            background-color: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        
+        .material-item h4 {
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .main-image {
+            margin-bottom: 1.5rem;
+        }
+        
+        .main-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        
+        .image-gallery img {
+            width: 100%;
+            border-radius: 8px;
+            height: 120px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 992px) {
+            .services-hero .container,
+            .service-detailed .container {
+                flex-direction: column;
+            }
+            
+            .services-hero-image {
+                order: -1;
+            }
+            
+            .service-images {
+                order: -1;
+            }
+            
+            .materials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .image-gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Impressões 3D do Gabriel</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="servicos.html" class="active">Serviços</a></li>
-                    <li><a href="projetos.html">Projetos</a></li>
-                    <li><a href="materiais.html">Materiais</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
+        <!-- O conteúdo do cabeçalho será inserido via JavaScript -->
     </header>
 
     <main>
@@ -273,46 +466,11 @@
     </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h2>Impressões 3D do Gabriel</h2>
-                    <p>Transformando ideias em realidade</p>
-                </div>
-                <div class="footer-contact">
-                    <h3>Contato</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Av. Tecnologia, 1000 - Belo Horizonte, MG</p>
-                    <p><i class="fas fa-phone"></i> (31) 3333-3333</p>
-                    <p><i class="fas fa-envelope"></i> contato@gabriel3d.com.br</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Links Rápidos</h3>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="servicos.html">Serviços</a></li>
-                        <li><a href="projetos.html">Projetos</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h3>Redes Sociais</h3>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Impressões 3D do Gabriel. Todos os direitos reservados.</p>
-            </div>
-        </div>
+        <!-- O conteúdo do rodapé será inserido via JavaScript -->
     </footer>
 
+    <script src="../js/header.js"></script>
+    <script src="../js/footer.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html> 

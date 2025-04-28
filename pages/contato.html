@@ -7,249 +7,264 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* Estilos específicos para a página de contato */
         .contact-section {
-            padding: 80px 0;
+            padding: 5rem 0;
         }
+        
         .contact-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
+        
         .contact-intro {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 3rem;
         }
+        
         .contact-headline {
-            font-size: 32px;
-            color: #0078d4;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
         }
+        
+        .contact-headline::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 10px auto 0;
+        }
+        
         .contact-description {
-            font-size: 18px;
-            color: #666;
+            font-size: 1.1rem;
+            color: var(--gray-color);
             max-width: 700px;
             margin: 0 auto;
             line-height: 1.6;
         }
+        
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            margin-bottom: 80px;
+            gap: 3rem;
+            margin-bottom: 4rem;
         }
+        
         .contact-info {
-            background-color: #f8f9fa;
+            background-color: var(--light-color);
             border-radius: 10px;
-            padding: 40px;
+            padding: 2.5rem;
             height: fit-content;
         }
+        
         .contact-info h3 {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 30px;
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
         }
+        
         .info-item {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 25px;
+            margin-bottom: 1.5rem;
         }
+        
         .info-icon {
             width: 50px;
             height: 50px;
-            background-color: #e6f3ff;
+            background-color: rgba(0, 102, 204, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 15px;
+            margin-right: 1rem;
             flex-shrink: 0;
         }
+        
         .info-icon i {
-            font-size: 20px;
-            color: #0078d4;
+            font-size: 1.25rem;
+            color: var(--primary-color);
         }
+        
         .info-content h4 {
-            font-size: 18px;
-            color: #333;
-            margin-bottom: 5px;
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.3rem;
         }
+        
         .info-content p, .info-content a {
-            color: #666;
+            color: var(--gray-color);
             line-height: 1.6;
             text-decoration: none;
             transition: color 0.3s ease;
         }
+        
         .info-content a:hover {
-            color: #0078d4;
+            color: var(--primary-color);
         }
+        
         .social-links-contact {
             display: flex;
             gap: 15px;
-            margin-top: 30px;
+            margin-top: 2rem;
         }
+        
         .social-links-contact a {
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: #e6f3ff;
+            background-color: rgba(0, 102, 204, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #0078d4;
+            color: var(--primary-color);
             transition: all 0.3s ease;
         }
+        
         .social-links-contact a:hover {
-            background-color: #0078d4;
+            background-color: var(--primary-color);
             color: white;
             transform: translateY(-3px);
         }
+        
         .contact-form {
             background-color: white;
             border-radius: 10px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            padding: 2.5rem;
+            box-shadow: var(--box-shadow);
         }
+        
         .contact-form h3 {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 30px;
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
         }
+        
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
         }
+        
         .form-group label {
             display: block;
-            margin-bottom: 8px;
-            color: #555;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
             font-weight: 500;
         }
+        
         .form-control {
             width: 100%;
-            padding: 14px 18px;
+            padding: 0.75rem 1rem;
             border: 1px solid #ddd;
             border-radius: 8px;
-            font-size: 16px;
-            color: #333;
+            font-size: 1rem;
+            color: var(--secondary-color);
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
+        
         .form-control:focus {
-            border-color: #0078d4;
-            box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.1);
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
             outline: none;
         }
+        
         textarea.form-control {
             resize: vertical;
             min-height: 120px;
         }
+        
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 1.25rem;
         }
+        
         .btn-submit {
-            background-color: #0078d4;
+            background-color: var(--primary-color);
             color: white;
             border: none;
-            padding: 15px 30px;
+            padding: 0.75rem 1.5rem;
             border-radius: 8px;
-            font-size: 16px;
+            font-size: 1rem;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.3s ease;
             display: inline-block;
             text-align: center;
         }
+        
         .btn-submit:hover {
-            background-color: #005fa3;
+            background-color: #004fa3;
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
+        
         .map-section {
-            margin-bottom: 80px;
+            margin-bottom: 4rem;
         }
+        
         .map-container {
             border-radius: 10px;
             overflow: hidden;
             height: 450px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            box-shadow: var(--box-shadow);
         }
+        
         .map-container iframe {
             width: 100%;
             height: 100%;
             border: 0;
         }
+        
         .faq-section {
-            background-color: #f8f9fa;
-            padding: 80px 0;
-            margin-bottom: 80px;
+            background-color: var(--light-color);
+            padding: 5rem 0;
+            margin-bottom: 4rem;
         }
+        
         .faq-container {
             max-width: 800px;
             margin: 0 auto;
         }
+        
         .faq-intro {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 3rem;
         }
+        
         .faq-intro h3 {
-            font-size: 28px;
-            color: #333;
-            margin-bottom: 15px;
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
         }
+        
         .faq-intro p {
-            color: #666;
-            font-size: 18px;
-            line-height: 1.6;
+            color: var(--gray-color);
+            max-width: 600px;
+            margin: 0 auto;
         }
-        .faq-item {
-            background-color: white;
-            border-radius: 8px;
-            padding: 25px 30px;
-            margin-bottom: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        .faq-question {
-            font-size: 18px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 15px;
-            position: relative;
-            cursor: pointer;
-            padding-right: 30px;
-            transition: color 0.3s ease;
-        }
-        .faq-question:hover {
-            color: #0078d4;
-        }
-        .faq-question::after {
-            content: '\f107';
-            font-family: 'Font Awesome 5 Free';
-            position: absolute;
-            right: 0;
-            top: 0;
-            font-size: 20px;
-            color: #0078d4;
-            transition: transform 0.3s ease;
-        }
-        .faq-item.active .faq-question::after {
-            transform: rotate(180deg);
-        }
-        .faq-answer {
-            display: none;
-            color: #666;
-            line-height: 1.6;
-            padding-top: 10px;
-        }
-        .faq-item.active .faq-answer {
-            display: block;
-        }
+        
         @media (max-width: 992px) {
             .contact-grid {
                 grid-template-columns: 1fr;
-                gap: 40px;
             }
+            
+            .contact-info {
+                margin-bottom: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
             .form-row {
                 grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .contact-form, .contact-info {
+                padding: 1.5rem;
             }
         }
     </style>
@@ -257,22 +272,7 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Impressões 3D do Gabriel</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
-                    <li><a href="projetos.html">Projetos</a></li>
-                    <li><a href="materiais.html">Materiais</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="contato.html" class="active">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
+        <!-- O conteúdo do cabeçalho será inserido via JavaScript -->
     </header>
 
     <section class="page-banner">
@@ -436,44 +436,7 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h2>Impressões 3D do Gabriel</h2>
-                    <p>Transformando ideias em realidade</p>
-                </div>
-                <div class="footer-contact">
-                    <h3>Contato</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Av. Amazonas, 5253 - Nova Suíça, Belo Horizonte - MG</p>
-                    <p><i class="fas fa-phone"></i> (31) 3333-4444</p>
-                    <p><i class="fas fa-envelope"></i> contato@gabriel3d.com.br</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Links Rápidos</h3>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="servicos.html">Serviços</a></li>
-                        <li><a href="projetos.html">Projetos</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h3>Redes Sociais</h3>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Impressões 3D do Gabriel. Todos os direitos reservados.</p>
-            </div>
-        </div>
+        <!-- O conteúdo do rodapé será inserido via JavaScript -->
     </footer>
 
     <script src="../js/main.js"></script>
@@ -513,5 +476,8 @@
             }
         });
     </script>
+    <script src="../js/header.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html> 
