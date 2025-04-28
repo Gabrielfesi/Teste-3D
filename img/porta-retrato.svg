@@ -1,0 +1,8 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#f0f0f0"/>
+  <rect x="80" y="80" width="240" height="180" rx="5" fill="#34495e" stroke="#2c3e50" stroke-width="10"/>
+  <rect x="100" y="100" width="200" height="140" rx="2" fill="#ecf0f1"/>
+  <circle cx="200" cy="170" r="50" fill="#e74c3c"/>
+  <polygon points="170,150 230,150 200,200" fill="#f1c40f"/>
+  <text x="200" y="350" font-family="Arial" font-size="18" text-anchor="middle" fill="#333">Porta-Retrato 3D</text>
+</svg> 

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços para Empresas - UAI LAB 3D</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos específicos para a página B2B */
+        .services-intro {
+            background-color: var(--light-color);
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .services-intro p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        .service-cards {
+            margin: 5rem 0;
+        }
+        
+        .service-card {
+            display: flex;
+            margin-bottom: 3rem;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .service-image {
+            flex: 1;
+            min-height: 300px;
+            overflow: hidden;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .service-content {
+            flex: 1;
+            padding: 3rem;
+        }
+        
+        .service-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .service-list {
+            margin: 2rem 0;
+        }
+        
+        .service-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .service-list li i {
+            color: var(--primary-color);
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        
+        .service-card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .quote-section {
+            background-color: var(--light-color);
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .quote-form {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            background-color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .checkbox-group {
+            margin: 2rem 0;
+        }
+        
+        .checkbox-group label {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            cursor: pointer;
+        }
+        
+        .checkbox-group input {
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        
+        .benefits {
+            margin: 5rem 0;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .benefit-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .benefit-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .benefit-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .clients {
+            background-color: var(--light-color);
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .client-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .client-logo {
+            width: 150px;
+            height: 80px;
+            background-color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        
+        .client-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        @media (max-width: 992px) {
+            .service-card {
+                flex-direction: column !important;
+            }
+            
+            .service-image {
+                min-height: 200px;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>UAI LAB 3D</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="loja.html">Loja</a></li>
+                    <li><a href="personalizados.html">Personalizados</a></li>
+                    <li><a href="b2b.html" class="active">Para Empresas</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="cart-user">
+                <a href="carrinho.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                <a href="login.html" class="user-icon"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="b2b-hero">
+        <div class="container">
+            <h1 class="section-title">Soluções em Impressão 3D para Empresas</h1>
+            <p class="section-description">Otimize seus processos de desenvolvimento de produtos, prototipagem e fabricação com nossas soluções empresariais em impressão 3D.</p>
+        </div>
+    </section>
+
+    <section class="services-intro">
+        <div class="container">
+            <p>A UAI LAB 3D oferece soluções completas de impressão 3D para empresas de todos os portes, desde startups até grandes indústrias. Nossa experiência e tecnologia de ponta permitem que sua empresa economize tempo e dinheiro em desenvolvimento de produtos, prototipagem rápida e produção de peças personalizadas.</p>
+        </div>
+    </section>
+
+    <section class="service-section">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            
+            <div class="service-cards">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://i.ytimg.com/vi/YX_mDkXCjkM/maxresdefault.jpg" alt="Prototipagem Rápida">
+                    </div>
+                    <div class="service-content">
+                        <h3>Prototipagem Rápida</h3>
+                        <p>Transforme suas ideias em protótipos funcionais em questão de dias, não semanas. Nosso serviço de prototipagem rápida permite testar conceitos, validar designs e apresentar produtos a investidores ou clientes antes da produção final.</p>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle"></i> Protótipos funcionais com alta precisão</li>
+                            <li><i class="fas fa-check-circle"></i> Múltiplos materiais disponíveis para atender diferentes necessidades</li>
+                            <li><i class="fas fa-check-circle"></i> Acabamento profissional para apresentações</li>
+                            <li><i class="fas fa-check-circle"></i> Suporte de design e engenharia</li>
+                        </ul>
+                        <a href="#quote" class="btn primary">Solicitar Orçamento</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://i0.wp.com/core-electronics.com.au/media/wysiwyg/tutorials/aidan/3d-printing.png" alt="Peças de Reposição">
+                    </div>
+                    <div class="service-content">
+                        <h3>Peças de Reposição sob Demanda</h3>
+                        <p>Minimize seu inventário e resolva problemas de obsolescência com nossa produção de peças de reposição sob demanda. Ideal para manutenção industrial, equipamentos antigos ou peças descontinuadas.</p>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle"></i> Engenharia reversa de peças existentes</li>
+                            <li><i class="fas fa-check-circle"></i> Materiais resistentes para uso industrial</li>
+                            <li><i class="fas fa-check-circle"></i> Produção em lotes pequenos ou individuais</li>
+                            <li><i class="fas fa-check-circle"></i> Entrega rápida para minimizar tempo de inatividade</li>
+                        </ul>
+                        <a href="#quote" class="btn primary">Solicitar Orçamento</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://i.ytimg.com/vi/8nDDhHsbueQ/maxresdefault.jpg" alt="Produção em Pequena Escala">
+                    </div>
+                    <div class="service-content">
+                        <h3>Produção em Pequena Escala</h3>
+                        <p>Ideal para startups, produtos customizados ou produção inicial antes de investir em ferramental caro. Nossa produção em pequena escala permite lançar produtos inovadores no mercado com menor investimento inicial.</p>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle"></i> Produção de 10 a 1000 unidades</li>
+                            <li><i class="fas fa-check-circle"></i> Possibilidade de customização por lote</li>
+                            <li><i class="fas fa-check-circle"></i> Controle de qualidade rigoroso</li>
+                            <li><i class="fas fa-check-circle"></i> Escalabilidade conforme demanda</li>
+                        </ul>
+                        <a href="#quote" class="btn primary">Solicitar Orçamento</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://i.ytimg.com/vi/mUEsNMdO8a4/maxresdefault.jpg" alt="Consultoria em Impressão 3D">
+                    </div>
+                    <div class="service-content">
+                        <h3>Consultoria em Impressão 3D</h3>
+                        <p>Nossa equipe de especialistas pode ajudar sua empresa a implementar soluções de impressão 3D em seus processos ou desenvolver projetos específicos para suas necessidades.</p>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle"></i> Análise de viabilidade para aplicações específicas</li>
+                            <li><i class="fas fa-check-circle"></i> Treinamento para sua equipe</li>
+                            <li><i class="fas fa-check-circle"></i> Otimização de designs para impressão 3D</li>
+                            <li><i class="fas fa-check-circle"></i> Implementação de fluxos de trabalho eficientes</li>
+                        </ul>
+                        <a href="#quote" class="btn primary">Solicitar Orçamento</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Benefícios para sua Empresa</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Redução de Custos</h3>
+                    <p>Economize em ferramental, minimizando despesas de produção inicial e prototipagem.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Aceleração do Desenvolvimento</h3>
+                    <p>Reduza o tempo de lançamento de produtos com ciclos de prototipagem mais rápidos.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Flexibilidade de Design</h3>
+                    <p>Crie geometrias complexas impossíveis com métodos tradicionais de fabricação.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Inovação Constante</h3>
+                    <p>Teste mais ideias com menor custo, incentivando uma cultura de inovação.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <i class="fas fa-recycle"></i>
+                    <h3>Sustentabilidade</h3>
+                    <p>Redução de desperdício de material e possibilidade de usar materiais biodegradáveis.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Vantagem Competitiva</h3>
+                    <p>Destaque-se no mercado com produtos mais inovadores e personalizados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="clients">
+        <div class="container">
+            <h2 class="section-title">Empresas que Confiam em Nós</h2>
+            
+            <div class="client-logos">
+                <div class="client-logo">
+                    <img src="https://logopng.com.br/logos/dell-5.png" alt="Logo Cliente 1">
+                </div>
+                <div class="client-logo">
+                    <img src="https://4.bp.blogspot.com/-zHv-3_DlHe4/W-YpXl7hCOI/AAAAAAABPQs/Hpz6o2d-Bp0L6wZDTENwmEZHSX-6uNOzwCLcBGAs/s1600/lg-logo-2.png" alt="Logo Cliente 2">
+                </div>
+                <div class="client-logo">
+                    <img src="https://logosmarcas.net/wp-content/uploads/2020/04/Sony-Logo.png" alt="Logo Cliente 3">
+                </div>
+                <div class="client-logo">
+                    <img src="https://logopng.com.br/logos/ibm-83.png" alt="Logo Cliente 4">
+                </div>
+                <div class="client-logo">
+                    <img src="https://logodownload.org/wp-content/uploads/2014/07/adobe-logo-0.png" alt="Logo Cliente 5">
+                </div>
+                <div class="client-logo">
+                    <img src="https://logodownload.org/wp-content/uploads/2018/02/visa-logo-1.png" alt="Logo Cliente 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quote" class="quote-section">
+        <div class="container">
+            <h2 class="section-title">Solicite um Orçamento</h2>
+            <p>Preencha o formulário abaixo e nossa equipe entrará em contato em até 24 horas úteis com uma proposta personalizada para sua empresa.</p>
+            
+            <div class="quote-form">
+                <form id="b2b-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="company">Nome da Empresa*</label>
+                            <input type="text" id="company" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="name">Nome do Responsável*</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail Corporativo*</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefone*</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="industry">Setor de Atuação</label>
+                            <select id="industry">
+                                <option value="">Selecione o setor</option>
+                                <option value="automotive">Automotivo</option>
+                                <option value="aerospace">Aeroespacial</option>
+                                <option value="medical">Médico/Saúde</option>
+                                <option value="consumer">Produtos de Consumo</option>
+                                <option value="electronics">Eletrônicos</option>
+                                <option value="manufacturing">Manufatura</option>
+                                <option value="architecture">Arquitetura</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company-size">Tamanho da Empresa</label>
+                            <select id="company-size">
+                                <option value="">Selecione o tamanho</option>
+                                <option value="startup">Startup/Até 10 funcionários</option>
+                                <option value="small">Pequena - 11 a 50 funcionários</option>
+                                <option value="medium">Média - 51 a 200 funcionários</option>
+                                <option value="large">Grande - 201+ funcionários</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project-description">Descrição do Projeto/Necessidade*</label>
+                        <textarea id="project-description" required placeholder="Descreva seu projeto, requisitos específicos, volumes esperados, materiais desejados, etc."></textarea>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <h3>Serviços de Interesse*</h3>
+                        <label>
+                            <input type="checkbox" name="service" value="prototyping"> Prototipagem Rápida
+                        </label>
+                        <label>
+                            <input type="checkbox" name="service" value="spare-parts"> Peças de Reposição
+                        </label>
+                        <label>
+                            <input type="checkbox" name="service" value="small-production"> Produção em Pequena Escala
+                        </label>
+                        <label>
+                            <input type="checkbox" name="service" value="consulting"> Consultoria em Impressão 3D
+                        </label>
+                        <label>
+                            <input type="checkbox" name="service" value="other"> Outro (especificar na descrição)
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="terms" required>
+                            Concordo com a <a href="#">Política de Privacidade</a> e autorizo o contato da UAI LAB 3D
+                        </label>
+                    </div>
+                    
+                    <div class="form-group" style="text-align: center;">
+                        <button type="submit" class="btn primary">Enviar Solicitação</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>UAI LAB 3D</h3>
+                    <p>Transformando ideias em realidade desde 2020. Especialistas em impressão 3D para pessoas e empresas.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="loja.html">Loja</a></li>
+                        <li><a href="personalizados.html">Personalizados</a></li>
+                        <li><a href="b2b.html">Para Empresas</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Tecnologia, 1500 - São Paulo, SP</li>
+                        <li><i class="fas fa-phone"></i> (11) 3456-7890</li>
+                        <li><i class="fas fa-envelope"></i> contato@ualab3d.com.br</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Receba novidades e promoções exclusivas:</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu e-mail">
+                        <button type="submit" class="btn primary">Assinar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 UAI LAB 3D. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="whatsapp-button">
+        <a href="https://wa.me/5511987654321" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Validação do formulário B2B
+        document.addEventListener('DOMContentLoaded', function() {
+            const b2bForm = document.getElementById('b2b-form');
+            
+            if (b2bForm) {
+                b2bForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Verificar se pelo menos um serviço foi selecionado
+                    const services = document.querySelectorAll('input[name="service"]:checked');
+                    if (services.length === 0) {
+                        alert('Por favor, selecione pelo menos um serviço de interesse.');
+                        return;
+                    }
+                    
+                    // Simular envio do formulário
+                    const submitButton = b2bForm.querySelector('button[type="submit"]');
+                    const originalText = submitButton.textContent;
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Enviando...';
+                    
+                    setTimeout(function() {
+                        b2bForm.reset();
+                        alert('Sua solicitação foi enviada com sucesso! Nossa equipe comercial entrará em contato em breve.');
+                        
+                        submitButton.disabled = false;
+                        submitButton.textContent = originalText;
+                    }, 2000);
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

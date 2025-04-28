@@ -1,0 +1,30 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#f0f0f0"/>
+  <rect x="100" y="100" width="200" height="200" fill="#8b4513"/>
+  
+  <!-- Tabuleiro de xadrez -->
+  <rect x="110" y="110" width="25" height="25" fill="#f5deb3"/>
+  <rect x="135" y="110" width="25" height="25" fill="#8b4513"/>
+  <rect x="160" y="110" width="25" height="25" fill="#f5deb3"/>
+  <rect x="185" y="110" width="25" height="25" fill="#8b4513"/>
+  <rect x="210" y="110" width="25" height="25" fill="#f5deb3"/>
+  <rect x="235" y="110" width="25" height="25" fill="#8b4513"/>
+  <rect x="260" y="110" width="25" height="25" fill="#f5deb3"/>
+  
+  <rect x="110" y="135" width="25" height="25" fill="#8b4513"/>
+  <rect x="135" y="135" width="25" height="25" fill="#f5deb3"/>
+  <rect x="160" y="135" width="25" height="25" fill="#8b4513"/>
+  <rect x="185" y="135" width="25" height="25" fill="#f5deb3"/>
+  <rect x="210" y="135" width="25" height="25" fill="#8b4513"/>
+  <rect x="235" y="135" width="25" height="25" fill="#f5deb3"/>
+  <rect x="260" y="135" width="25" height="25" fill="#8b4513"/>
+  
+  <!-- Peças de xadrez simplificadas -->
+  <circle cx="122" cy="122" r="8" fill="#222"/>
+  <polygon points="170 118, 175 128, 165 128" fill="#222"/>
+  <rect x="185" y="118" width="10" height="10" fill="#222"/>
+  <circle cx="222" cy="122" r="8" fill="#fff" stroke="#222" stroke-width="1"/>
+  <polygon points="245 118, 250 128, 240 128" fill="#fff" stroke="#222" stroke-width="1"/>
+  
+  <text x="200" y="350" font-family="Arial" font-size="18" text-anchor="middle" fill="#333">Mini Xadrez</text>
+</svg> 

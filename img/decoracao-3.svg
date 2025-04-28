@@ -1,0 +1,7 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f0f0f0"/>
+  <circle cx="150" cy="100" r="50" fill="#f1c40f"/>
+  <path d="M 150 50 L 170 90 L 210 90 L 180 110 L 190 150 L 150 130 L 110 150 L 120 110 L 90 90 L 130 90 Z" fill="#f39c12"/>
+  <circle cx="150" cy="100" r="15" fill="#e67e22"/>
+  <text x="150" y="180" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Luminária Estrela</text>
+</svg> 
