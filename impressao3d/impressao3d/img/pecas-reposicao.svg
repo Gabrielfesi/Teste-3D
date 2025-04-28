@@ -1,0 +1,8 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f0f0f0"/>
+  <circle cx="150" cy="150" r="50" fill="#e74c3c"/>
+  <rect x="230" y="100" width="80" height="80" fill="#2ecc71"/>
+  <polygon points="180,220 220,220 200,260" fill="#f39c12"/>
+  <text x="200" y="50" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Peças de Reposição</text>
+  <text x="200" y="70" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">para Maquinário</text>
+</svg> 

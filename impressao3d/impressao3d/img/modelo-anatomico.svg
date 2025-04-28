@@ -1,0 +1,10 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f0f0f0"/>
+  <ellipse cx="150" cy="80" rx="50" ry="30" fill="#e74c3c"/>
+  <path d="M 120 80 C 120 100 180 100 180 80" fill="#c0392b"/>
+  <ellipse cx="150" cy="120" rx="20" ry="30" fill="#e74c3c"/>
+  <path d="M 150 150 L 130 180 M 150 150 L 170 180" stroke="#e74c3c" stroke-width="4"/>
+  <circle cx="135" cy="75" r="5" fill="#f0f0f0"/>
+  <circle cx="165" cy="75" r="5" fill="#f0f0f0"/>
+  <text x="150" y="40" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Modelo Anatômico</text>
+</svg> 

@@ -1,0 +1,7 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f0f0f0"/>
+  <polygon points="150,40 200,80 180,140 120,140 100,80" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <line x1="150" y1="40" x2="150" y2="140" stroke="#2980b9" stroke-width="2"/>
+  <line x1="100" y1="80" x2="200" y2="80" stroke="#2980b9" stroke-width="2"/>
+  <text x="150" y="170" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Protótipo Aerodinâmico</text>
+</svg> 

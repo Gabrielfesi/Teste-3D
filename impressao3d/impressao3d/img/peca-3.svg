@@ -1,0 +1,8 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f0f0f0"/>
+  <path d="M 100 80 L 200 80 L 200 120 L 100 120 Z" fill="#e74c3c"/>
+  <path d="M 120 80 L 120 60 L 180 60 L 180 80" fill="#c0392b"/>
+  <path d="M 140 120 L 140 140 L 160 140 L 160 120" fill="#c0392b"/>
+  <rect x="110" y="90" width="80" height="20" fill="#f0f0f0"/>
+  <text x="150" y="170" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Conector Universal</text>
+</svg> 

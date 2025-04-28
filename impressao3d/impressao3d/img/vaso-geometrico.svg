@@ -1,0 +1,7 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#f0f0f0"/>
+  <polygon points="150,50 250,50 280,150 280,300 120,300 120,150" fill="#3498db" stroke="#2980b9" stroke-width="3"/>
+  <polygon points="150,50 250,50 280,150 120,150" fill="#2980b9" stroke="#2980b9" stroke-width="1"/>
+  <path d="M 180 100 L 220 100 L 210 200 L 190 200 Z" fill="#1abc9c"/>
+  <text x="200" y="350" font-family="Arial" font-size="18" text-anchor="middle" fill="#333">Vaso Geométrico</text>
+</svg> 

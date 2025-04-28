@@ -1,0 +1,28 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#f0f0f0"/>
+  
+  <!-- Impressora 3D simplificada -->
+  <rect x="200" y="100" width="200" height="200" fill="#34495e"/>
+  <rect x="220" y="120" width="160" height="160" fill="#2c3e50"/>
+  
+  <!-- Cabeçote de impressão -->
+  <rect x="250" y="130" width="100" height="20" fill="#e74c3c"/>
+  <rect x="290" y="150" width="20" height="20" fill="#c0392b"/>
+  
+  <!-- Base de impressão -->
+  <rect x="250" y="240" width="100" height="10" fill="#95a5a6"/>
+  
+  <!-- Objeto sendo impresso -->
+  <polygon points="290,200 320,200 330,210 310,230 280,230 270,210" fill="#3498db"/>
+  
+  <!-- Linhas de camadas -->
+  <line x1="280" y1="210" x2="320" y2="210" stroke="#2980b9" stroke-width="2"/>
+  <line x1="270" y1="220" x2="330" y2="220" stroke="#2980b9" stroke-width="2"/>
+  
+  <!-- Setas de movimento -->
+  <path d="M 400 180 L 420 180 L 410 160 Z" fill="#e67e22"/>
+  <path d="M 180 180 L 160 180 L 170 160 Z" fill="#e67e22"/>
+  
+  <text x="300" y="50" font-family="Arial" font-size="20" text-anchor="middle" fill="#333">Prototipagem Rápida</text>
+  <text x="300" y="350" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Do conceito ao protótipo em tempo recorde</text>
+</svg> 

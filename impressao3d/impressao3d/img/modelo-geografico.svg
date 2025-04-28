@@ -1,0 +1,8 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f0f0f0"/>
+  <circle cx="150" cy="100" r="50" fill="#3498db"/>
+  <path d="M 120 70 L 150 90 L 160 70 L 180 80 L 190 60" fill="#27ae60" stroke="#27ae60" stroke-width="2"/>
+  <path d="M 110 100 L 130 110 L 150 100 L 170 120 L 190 100" fill="#27ae60" stroke="#27ae60" stroke-width="2"/>
+  <path d="M 120 130 L 140 140 L 160 120 L 180 130" fill="#27ae60" stroke="#27ae60" stroke-width="2"/>
+  <text x="150" y="40" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Modelo Geográfico</text>
+</svg> 
