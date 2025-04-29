@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#004080"/>
+      <stop offset="100%" stop-color="#0066cc"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg-gradient)"/>
+  
+  <!-- 3D Printer -->
+  <g transform="translate(120, 80)">
+    <rect x="0" y="0" width="200" height="240" fill="#333333" rx="10" ry="10"/>
+    <rect x="20" y="40" width="160" height="160" fill="#222222" stroke="#444444" stroke-width="4"/>
+    <rect x="60" y="80" width="80" height="80" fill="#0066cc"/>
+    <rect x="20" y="210" width="160" height="20" fill="#444444"/>
+    <circle cx="40" cy="20" r="8" fill="#ff3333"/>
+    <circle cx="70" cy="20" r="8" fill="#33ff33"/>
+    <rect x="160" y="15" width="30" height="10" fill="#666666" rx="2" ry="2"/>
+  </g>
+  
+  <!-- 3D Model -->
+  <g transform="translate(450, 60)">
+    <path d="M150,50 L250,100 L150,150 L50,100 Z" fill="#0066cc" stroke="#ffffff" stroke-width="2"/>
+    <path d="M150,50 L150,190 L250,240 L250,100 Z" fill="#0088ee" stroke="#ffffff" stroke-width="2"/>
+    <path d="M150,50 L150,190 L50,240 L50,100 Z" fill="#0055aa" stroke="#ffffff" stroke-width="2"/>
+    <path d="M150,190 L250,240 L150,290 L50,240 Z" fill="#003377" stroke="#ffffff" stroke-width="2"/>
+  </g>
+  
+  <!-- Text -->
+  <g transform="translate(400, 360)" text-anchor="middle">
+    <text font-family="Arial" font-size="32" fill="#ffffff" font-weight="bold">Inicie seu projeto de impressão 3D</text>
+  </g>
+  
+  <!-- Particles -->
+  <g fill="#ffffff" opacity="0.5">
+    <circle cx="50" cy="50" r="3"/>
+    <circle cx="120" cy="350" r="2"/>
+    <circle cx="200" cy="30" r="4"/>
+    <circle cx="300" cy="200" r="2"/>
+    <circle cx="400" cy="100" r="3"/>
+    <circle cx="500" cy="300" r="4"/>
+    <circle cx="600" cy="150" r="2"/>
+    <circle cx="700" cy="250" r="3"/>
+    <circle cx="750" cy="100" r="2"/>
+    <circle cx="650" cy="350" r="4"/>
+  </g>
+</svg> 

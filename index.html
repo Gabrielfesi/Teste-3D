@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impressões 3D do Gabriel - Soluções em impressão 3D</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/alignment.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         .hero {
@@ -13,7 +14,7 @@
             background-position: center;
         }
         
-        .call-to-action {
+        .cta {
             background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://d3t5bxujdkxo1w.cloudfront.net/wp-content/uploads/2022/06/27153855/RostMtl-PolymerAM.jpg');
             background-size: cover;
             background-position: center;
@@ -21,18 +22,18 @@
     </style>
 </head>
 <body>
-    <header>
+    <header class="header">
         <!-- O conteúdo do cabeçalho será inserido via JavaScript -->
     </header>
 
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h2>Transformando Ideias em Realidade</h2>
-                <p>Impressão 3D de alta qualidade para suas necessidades pessoais e empresariais</p>
-                <div class="cta-buttons">
-                    <a href="pages/loja.html" class="btn primary">Comprar Produtos</a>
-                    <a href="pages/b2b.html" class="btn secondary">Solicitar Serviços</a>
+            <div class="hero__content">
+                <h2 class="hero__title">Transformando Ideias em Realidade</h2>
+                <p class="hero__text">Impressão 3D de alta qualidade para suas necessidades pessoais e empresariais</p>
+                <div class="hero__cta-buttons">
+                    <a href="pages/loja.html" class="btn btn--primary">Comprar Produtos</a>
+                    <a href="pages/b2b.html" class="btn btn--secondary">Solicitar Serviços</a>
                 </div>
             </div>
         </div>
@@ -41,25 +42,25 @@
     <section class="features">
         <div class="container">
             <h2 class="section-title">Nossos Diferenciais</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <i class="fas fa-trophy"></i>
-                    <h3>Qualidade Premium</h3>
+            <div class="features__grid">
+                <div class="features__card">
+                    <i class="features__card-icon fas fa-trophy"></i>
+                    <h3 class="features__card-title">Qualidade Premium</h3>
                     <p>Utilizamos as melhores impressoras e materiais do mercado para garantir resultados excepcionais.</p>
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-truck"></i>
-                    <h3>Entrega Rápida</h3>
+                <div class="features__card">
+                    <i class="features__card-icon fas fa-truck"></i>
+                    <h3 class="features__card-title">Entrega Rápida</h3>
                     <p>Produção e entrega em tempo recorde para seus projetos não pararem.</p>
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-cogs"></i>
-                    <h3>Personalização Total</h3>
+                <div class="features__card">
+                    <i class="features__card-icon fas fa-cogs"></i>
+                    <h3 class="features__card-title">Personalização Total</h3>
                     <p>Do design à produção, seu produto exatamente como você imaginou.</p>
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-leaf"></i>
-                    <h3>Sustentabilidade</h3>
+                <div class="features__card">
+                    <i class="features__card-icon fas fa-leaf"></i>
+                    <h3 class="features__card-title">Sustentabilidade</h3>
                     <p>Comprometidos com o meio ambiente, utilizamos materiais biodegradáveis.</p>
                 </div>
             </div>
@@ -69,42 +70,50 @@
     <section class="featured-products">
         <div class="container">
             <h2 class="section-title">Produtos em Destaque</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <div class="product-image">
+            <div class="products__grid">
+                <div class="products__card">
+                    <div class="products__card-image">
                         <img src="img/miniatura-arquitetonica.svg" alt="Miniatura Arquitetônica">
                     </div>
-                    <h3>Miniatura Arquitetônica</h3>
-                    <p class="price">R$ 199,90</p>
-                    <a href="pages/loja.html" class="btn primary">Ver na Loja</a>
+                    <div class="products__card-content">
+                        <h3 class="products__card-title">Miniatura Arquitetônica</h3>
+                        <p class="products__card-price">R$ 199,90</p>
+                        <a href="pages/loja.html" class="btn btn--primary products__card-btn">Ver na Loja</a>
+                    </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-image">
+                <div class="products__card">
+                    <div class="products__card-image">
                         <img src="img/suporte-smartphone.svg" alt="Suporte para Smartphone">
                     </div>
-                    <h3>Suporte para Smartphone</h3>
-                    <p class="price">R$ 59,90</p>
-                    <a href="pages/loja.html" class="btn primary">Ver na Loja</a>
+                    <div class="products__card-content">
+                        <h3 class="products__card-title">Suporte para Smartphone</h3>
+                        <p class="products__card-price">R$ 59,90</p>
+                        <a href="pages/loja.html" class="btn btn--primary products__card-btn">Ver na Loja</a>
+                    </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-image">
+                <div class="products__card">
+                    <div class="products__card-image">
                         <img src="img/organizador-mesa.svg" alt="Organizador de Mesa">
                     </div>
-                    <h3>Organizador de Mesa</h3>
-                    <p class="price">R$ 89,90</p>
-                    <a href="pages/loja.html" class="btn primary">Ver na Loja</a>
+                    <div class="products__card-content">
+                        <h3 class="products__card-title">Organizador de Mesa</h3>
+                        <p class="products__card-price">R$ 89,90</p>
+                        <a href="pages/loja.html" class="btn btn--primary products__card-btn">Ver na Loja</a>
+                    </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-image">
+                <div class="products__card">
+                    <div class="products__card-image">
                         <img src="img/porta-joias.svg" alt="Porta-Joias Personalizado">
                     </div>
-                    <h3>Porta-Joias Personalizado</h3>
-                    <p class="price">R$ 149,90</p>
-                    <a href="pages/loja.html" class="btn primary">Ver na Loja</a>
+                    <div class="products__card-content">
+                        <h3 class="products__card-title">Porta-Joias Personalizado</h3>
+                        <p class="products__card-price">R$ 149,90</p>
+                        <a href="pages/loja.html" class="btn btn--primary products__card-btn">Ver na Loja</a>
+                    </div>
                 </div>
             </div>
-            <div class="view-all">
-                <a href="pages/loja.html" class="btn secondary">Ver Todos os Produtos</a>
+            <div class="products__view-all">
+                <a href="pages/loja.html" class="btn btn--secondary">Ver Todos os Produtos</a>
             </div>
         </div>
     </section>
@@ -112,40 +121,40 @@
     <section class="testimonials">
         <div class="container">
             <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
+            <div class="testimonials__grid">
+                <div class="testimonials__card">
+                    <div class="testimonials__text">
                         <p>"Fiquei impressionado com a qualidade e precisão das peças que encomendei. Superou todas as minhas expectativas!"</p>
                     </div>
-                    <div class="testimonial-author">
-                        <img src="https://i.pravatar.cc/150?img=68" alt="Cliente">
+                    <div class="testimonials__author">
+                        <img src="https://i.pravatar.cc/150?img=68" alt="Cliente" class="testimonials__author-img">
                         <div>
-                            <h4>Ricardo Souza</h4>
-                            <p>Arquiteto</p>
+                            <h4 class="testimonials__author-name">Ricardo Souza</h4>
+                            <p class="testimonials__author-title">Arquiteto</p>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
+                <div class="testimonials__card">
+                    <div class="testimonials__text">
                         <p>"Como empresa, encontramos um parceiro confiável para nossos protótipos. O atendimento B2B é excepcional."</p>
                     </div>
-                    <div class="testimonial-author">
-                        <img src="https://i.pravatar.cc/150?img=32" alt="Cliente">
+                    <div class="testimonials__author">
+                        <img src="https://i.pravatar.cc/150?img=32" alt="Cliente" class="testimonials__author-img">
                         <div>
-                            <h4>Ana Carolina</h4>
-                            <p>Gerente de Produto</p>
+                            <h4 class="testimonials__author-name">Ana Carolina</h4>
+                            <p class="testimonials__author-title">Gerente de Produto</p>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
+                <div class="testimonials__card">
+                    <div class="testimonials__text">
                         <p>"Encomendei miniaturas personalizadas para presentes e todos ficaram encantados. Acabamento impecável!"</p>
                     </div>
-                    <div class="testimonial-author">
-                        <img src="https://i.pravatar.cc/150?img=15" alt="Cliente">
+                    <div class="testimonials__author">
+                        <img src="https://i.pravatar.cc/150?img=15" alt="Cliente" class="testimonials__author-img">
                         <div>
-                            <h4>Marcelo Lima</h4>
-                            <p>Designer</p>
+                            <h4 class="testimonials__author-name">Marcelo Lima</h4>
+                            <p class="testimonials__author-title">Designer</p>
                         </div>
                     </div>
                 </div>
@@ -153,29 +162,30 @@
         </div>
     </section>
 
-    <section class="call-to-action">
+    <section class="cta">
         <div class="container">
-            <h2>Pronto para transformar suas ideias em realidade?</h2>
-            <p>Entre em contato conosco ou explore nossa loja para conhecer todas as possibilidades da impressão 3D.</p>
-            <div class="cta-buttons">
-                <a href="pages/contato.html" class="btn primary">Fale Conosco</a>
-                <a href="pages/loja.html" class="btn secondary">Explorar Loja</a>
+            <h2 class="cta__title">Pronto para transformar suas ideias em realidade?</h2>
+            <p class="cta__text">Entre em contato conosco ou explore nossa loja para conhecer todas as possibilidades da impressão 3D.</p>
+            <div class="cta__buttons">
+                <a href="pages/contato.html" class="btn btn--primary">Fale Conosco</a>
+                <a href="pages/loja.html" class="btn btn--secondary">Explorar Loja</a>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="footer">
         <!-- O conteúdo do rodapé será inserido via JavaScript -->
     </footer>
 
     <div class="whatsapp-button">
-        <a href="https://wa.me/5511987654321" target="_blank">
-            <i class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/5511987654321" target="_blank" class="whatsapp-button__link">
+            <i class="whatsapp-button__icon fab fa-whatsapp"></i>
         </a>
     </div>
 
     <script src="js/header.js"></script>
     <script src="js/footer.js"></script>
+    <script src="js/alignment.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html> 

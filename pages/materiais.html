@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Materiais para Impressão 3D | Impressões 3D do Gabriel</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/alignment.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Estilos específicos para a página de materiais */
@@ -16,7 +17,7 @@
         .materials-intro-content {
             max-width: 800px;
             margin: 0 auto;
-            text-align: center;
+            text-align: left;
         }
         
         .material-applications h4 {
@@ -47,6 +48,7 @@
         
         .consultation-content {
             flex: 1;
+            text-align: left;
         }
         
         .consultation-content h2 {
@@ -92,6 +94,129 @@
             box-shadow: var(--box-shadow);
         }
         
+        /* Estilos para cards */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .content-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .content-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-image {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .content-card:hover .card-image img {
+            transform: scale(1.1);
+        }
+        
+        .card-details {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        
+        .card-details h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        .card-description {
+            color: var(--gray-color);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        /* Estilos para categorias */
+        .category-section {
+            padding: 5rem 0;
+            background-color: var(--light-color);
+        }
+        
+        .category-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4rem;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .category-row:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category-row:last-child {
+            margin-bottom: 0;
+        }
+        
+        .category-image, .category-content {
+            flex: 1;
+        }
+        
+        .category-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .category-content {
+            padding: 3rem;
+            text-align: left;
+        }
+        
+        .category-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        .category-content p {
+            color: var(--gray-color);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .section-title {
+            text-align: left;
+            margin-bottom: 2.5rem;
+        }
+
+        .page-hero-content {
+            text-align: left;
+        }
+        
         @media (max-width: 992px) {
             .material-consultation .container {
                 flex-direction: column;
@@ -100,6 +225,47 @@
             .consultation-icons {
                 flex-direction: column;
                 gap: 2rem;
+            }
+            
+            .category-row {
+                flex-direction: column;
+            }
+            
+            .category-row:nth-child(even) {
+                flex-direction: column;
+            }
+            
+            .category-image {
+                min-height: 300px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 2rem;
+            }
+            
+            .category-content {
+                padding: 2rem;
+            }
+            
+            .card-image {
+                height: 200px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .category-image {
+                min-height: 200px;
+            }
+            
+            .card-details h3 {
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -143,7 +309,7 @@
                     <div class="category-content">
                         <h3>Plásticos</h3>
                         <p>Nossos materiais plásticos oferecem diversas possibilidades para projetos que necessitam de resistência, flexibilidade e custo-benefício.</p>
-                        <a href="#plastics" class="btn secondary">Ver Materiais Plásticos</a>
+                        <a href="#plastics" class="btn btn--secondary">Ver Materiais Plásticos</a>
                     </div>
                 </div>
                 
@@ -151,7 +317,7 @@
                     <div class="category-content">
                         <h3>Resinas</h3>
                         <p>As resinas são ideais para projetos que exigem alto nível de detalhamento e precisão, resultando em peças com acabamento excepcional.</p>
-                        <a href="#resins" class="btn secondary">Ver Resinas</a>
+                        <a href="#resins" class="btn btn--secondary">Ver Resinas</a>
                     </div>
                     <div class="category-image">
                         <img src="../img/materiais-resinas.svg" alt="Resinas para impressão 3D">
@@ -165,7 +331,7 @@
                     <div class="category-content">
                         <h3>Materiais Especiais</h3>
                         <p>Oferecemos materiais com propriedades específicas como condutividade, resistência a altas temperaturas, flexibilidade extrema e biocompatibilidade.</p>
-                        <a href="#special" class="btn secondary">Ver Materiais Especiais</a>
+                        <a href="#special" class="btn btn--secondary">Ver Materiais Especiais</a>
                     </div>
                 </div>
             </div>
@@ -479,7 +645,7 @@
                 <div class="content-grid">
                     <div class="content-card">
                         <div class="card-image">
-                            <img src="../img/material-fibra-carbono.svg" alt="Nylon com Fibra de Carbono">
+                            <img src="../img/resina-abs.svg" alt="Nylon com Fibra de Carbono">
                         </div>
                         <div class="card-details">
                             <h3>Nylon com Fibra de Carbono</h3>
@@ -530,7 +696,7 @@
                     
                     <div class="content-card">
                         <div class="card-image">
-                            <img src="../img/material-tpu.svg" alt="TPU Flexível">
+                            <img src="../img/resina-flexivel.svg" alt="TPU Flexível">
                         </div>
                         <div class="card-details">
                             <h3>TPU Flexível</h3>
@@ -587,24 +753,30 @@
                 <div class="consultation-content">
                     <h2>Não sabe qual material escolher?</h2>
                     <p>Nossos especialistas estão prontos para ajudar você a selecionar o material ideal para o seu projeto. Entre em contato para uma consultoria personalizada.</p>
+                    
                     <div class="consultation-icons">
                         <div class="consultation-icon">
-                            <i class="fas fa-file-contract"></i>
-                            <span>Envie seu projeto</span>
+                            <i class="fas fa-comments"></i>
+                            <span>Consultoria</span>
                         </div>
                         <div class="consultation-icon">
-                            <i class="fas fa-comments"></i>
-                            <span>Receba recomendações</span>
+                            <i class="fas fa-flask"></i>
+                            <span>Testes</span>
+                        </div>
+                        <div class="consultation-icon">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Análise</span>
                         </div>
                         <div class="consultation-icon">
                             <i class="fas fa-check-circle"></i>
-                            <span>Escolha a melhor opção</span>
+                            <span>Aprovação</span>
                         </div>
                     </div>
-                    <a href="contato.html" class="btn primary">Solicitar Consultoria de Materiais</a>
+                    
+                    <a href="../pages/contato.html" class="btn btn--primary">Agendar Consultoria</a>
                 </div>
                 <div class="consultation-image">
-                    <img src="../img/consultoria-materiais.svg" alt="Consultoria especializada de materiais">
+                    <img src="../img/materiais-hero.svg" alt="Consultoria de materiais">
                 </div>
             </div>
         </section>
@@ -614,8 +786,15 @@
         <!-- O conteúdo do rodapé será inserido via JavaScript -->
     </footer>
 
-    <script src="../js/main.js"></script>
+    <div class="whatsapp-button">
+        <a href="https://wa.me/5511987654321" target="_blank" class="whatsapp-button__link">
+            <i class="fab fa-whatsapp whatsapp-button__icon"></i>
+        </a>
+    </div>
+
     <script src="../js/header.js"></script>
     <script src="../js/footer.js"></script>
+    <script src="../js/alignment.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html> 

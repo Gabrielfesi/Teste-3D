@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Impressões 3D do Gabriel</title>
+    <title>Entre em Contato - Gabriel 3D</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -19,7 +19,7 @@
         }
         
         .contact-intro {
-            text-align: center;
+            text-align: left;
             margin-bottom: 3rem;
         }
         
@@ -35,14 +35,14 @@
             width: 80px;
             height: 4px;
             background: var(--primary-color);
-            margin: 10px auto 0;
+            margin: 10px 0 0;
         }
         
         .contact-description {
             font-size: 1.1rem;
             color: var(--gray-color);
             max-width: 700px;
-            margin: 0 auto;
+            margin: 0;
             line-height: 1.6;
         }
         
@@ -53,26 +53,28 @@
             margin-bottom: 4rem;
         }
         
-        .contact-info {
+        .contact__info {
             background-color: var(--light-color);
             border-radius: 10px;
             padding: 2.5rem;
             height: fit-content;
         }
         
-        .contact-info h3 {
+        .contact__info h3 {
             font-size: 1.5rem;
             color: var(--secondary-color);
             margin-bottom: 2rem;
+            text-align: left;
         }
         
-        .info-item {
+        .contact__info-item {
             display: flex;
             align-items: flex-start;
             margin-bottom: 1.5rem;
+            text-align: left;
         }
         
-        .info-icon {
+        .contact__info-icon {
             width: 50px;
             height: 50px;
             background-color: rgba(0, 102, 204, 0.1);
@@ -84,35 +86,37 @@
             flex-shrink: 0;
         }
         
-        .info-icon i {
+        .contact__info-icon i {
             font-size: 1.25rem;
             color: var(--primary-color);
         }
         
-        .info-content h4 {
+        .contact__info-content h4 {
             font-size: 1.1rem;
             color: var(--secondary-color);
             margin-bottom: 0.3rem;
+            text-align: left;
         }
         
-        .info-content p, .info-content a {
+        .contact__info-content p, .contact__info-content a {
             color: var(--gray-color);
             line-height: 1.6;
             text-decoration: none;
             transition: color 0.3s ease;
+            text-align: left;
         }
         
-        .info-content a:hover {
+        .contact__info-content a:hover {
             color: var(--primary-color);
         }
         
-        .social-links-contact {
+        .contact__social-links {
             display: flex;
             gap: 15px;
             margin-top: 2rem;
         }
         
-        .social-links-contact a {
+        .contact__social-links a {
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -124,37 +128,40 @@
             transition: all 0.3s ease;
         }
         
-        .social-links-contact a:hover {
+        .contact__social-links a:hover {
             background-color: var(--primary-color);
             color: white;
             transform: translateY(-3px);
         }
         
-        .contact-form {
+        .contact__form {
             background-color: white;
             border-radius: 10px;
             padding: 2.5rem;
             box-shadow: var(--box-shadow);
         }
         
-        .contact-form h3 {
+        .contact__form h3 {
             font-size: 1.5rem;
             color: var(--secondary-color);
             margin-bottom: 2rem;
+            text-align: left;
         }
         
-        .form-group {
+        .contact__form-group {
             margin-bottom: 1.25rem;
+            text-align: left;
         }
         
-        .form-group label {
+        .contact__form-group label {
             display: block;
             margin-bottom: 0.5rem;
             color: var(--secondary-color);
             font-weight: 500;
+            text-align: left;
         }
         
-        .form-control {
+        .contact__form-control {
             width: 100%;
             padding: 0.75rem 1rem;
             border: 1px solid #ddd;
@@ -164,24 +171,24 @@
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
         
-        .form-control:focus {
+        .contact__form-control:focus {
             border-color: var(--primary-color);
             box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
             outline: none;
         }
         
-        textarea.form-control {
+        textarea.contact__form-control {
             resize: vertical;
             min-height: 120px;
         }
         
-        .form-row {
+        .contact__form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.25rem;
         }
         
-        .btn-submit {
+        .contact__submit-btn {
             background-color: var(--primary-color);
             color: white;
             border: none;
@@ -195,55 +202,116 @@
             text-align: center;
         }
         
-        .btn-submit:hover {
+        .contact__submit-btn:hover {
             background-color: #004fa3;
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
-        .map-section {
+        .contact__map-section {
             margin-bottom: 4rem;
         }
         
-        .map-container {
+        .contact__map-container {
             border-radius: 10px;
             overflow: hidden;
             height: 450px;
             box-shadow: var(--box-shadow);
         }
         
-        .map-container iframe {
+        .contact__map-container iframe {
             width: 100%;
             height: 100%;
             border: 0;
         }
         
-        .faq-section {
+        .contact__faq-section {
             background-color: var(--light-color);
             padding: 5rem 0;
             margin-bottom: 4rem;
         }
         
-        .faq-container {
+        .contact__faq-container {
             max-width: 800px;
             margin: 0 auto;
         }
         
-        .faq-intro {
-            text-align: center;
+        .contact__faq-intro {
+            text-align: left;
             margin-bottom: 3rem;
         }
         
-        .faq-intro h3 {
+        .contact__faq-intro h3 {
             font-size: 2rem;
             color: var(--secondary-color);
             margin-bottom: 1rem;
+            text-align: left;
         }
         
-        .faq-intro p {
+        .contact__faq-intro p {
             color: var(--gray-color);
             max-width: 600px;
-            margin: 0 auto;
+            margin: 0;
+            text-align: left;
+        }
+        
+        .contact__faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .contact__faq-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact__faq-question {
+            padding: 1.2rem;
+            cursor: pointer;
+            position: relative;
+            font-weight: 600;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+        
+        .contact__faq-question::after {
+            content: "\f107";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .contact__faq-item.active .contact__faq-question {
+            color: var(--primary-color);
+        }
+        
+        .contact__faq-item.active .contact__faq-question::after {
+            transform: rotate(180deg);
+        }
+        
+        .contact__faq-answer {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .contact__faq-item.active .contact__faq-answer {
+            padding: 0 1.2rem 1.2rem 1.2rem;
+            max-height: 1000px;
+        }
+        
+        .contact__faq-answer p {
+            margin: 0;
+            color: var(--gray-color);
+            line-height: 1.6;
         }
         
         @media (max-width: 992px) {
@@ -251,21 +319,41 @@
                 grid-template-columns: 1fr;
             }
             
-            .contact-info {
+            .contact__info {
                 margin-bottom: 2rem;
             }
         }
         
-        @media (max-width: 768px) {
-            .form-row {
+        @media (max-width: 576px) {
+            .contact__form-row {
                 grid-template-columns: 1fr;
             }
         }
         
-        @media (max-width: 576px) {
-            .contact-form, .contact-info {
-                padding: 1.5rem;
-            }
+        /* Estilos para o banner da página */
+        .page-banner {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .banner-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .page-banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .page-banner p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -290,47 +378,47 @@
             </div>
 
             <div class="contact-grid">
-                <div class="contact-info">
+                <div class="contact__info">
                     <h3>Informações de Contato</h3>
-                    <div class="info-item">
-                        <div class="info-icon">
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <div class="info-content">
+                        <div class="contact__info-content">
                             <h4>Localização</h4>
                             <p>Av. Amazonas, 5253 - Nova Suíça<br>Belo Horizonte - MG, 30421-169</p>
                         </div>
                     </div>
-                    <div class="info-item">
-                        <div class="info-icon">
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">
                             <i class="fas fa-phone-alt"></i>
                         </div>
-                        <div class="info-content">
+                        <div class="contact__info-content">
                             <h4>Telefone</h4>
                             <p><a href="tel:+553133334444">(31) 3333-4444</a></p>
                             <p><a href="tel:+5531999998888">(31) 99999-8888</a> (WhatsApp)</p>
                         </div>
                     </div>
-                    <div class="info-item">
-                        <div class="info-icon">
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
-                        <div class="info-content">
+                        <div class="contact__info-content">
                             <h4>Email</h4>
                             <p><a href="mailto:contato@gabriel3d.com.br">contato@gabriel3d.com.br</a></p>
                             <p><a href="mailto:projetos@gabriel3d.com.br">projetos@gabriel3d.com.br</a></p>
                         </div>
                     </div>
-                    <div class="info-item">
-                        <div class="info-icon">
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">
                             <i class="fas fa-clock"></i>
                         </div>
-                        <div class="info-content">
+                        <div class="contact__info-content">
                             <h4>Horário de Funcionamento</h4>
                             <p>Segunda à Sexta: 8h às 18h<br>Sábado: 9h às 13h</p>
                         </div>
                     </div>
-                    <div class="social-links-contact">
+                    <div class="contact__social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -339,27 +427,27 @@
                     </div>
                 </div>
 
-                <div class="contact-form">
+                <div class="contact__form">
                     <h3>Envie sua Mensagem</h3>
                     <form id="contactForm" action="#" method="POST">
-                        <div class="form-row">
-                            <div class="form-group">
+                        <div class="contact__form-row">
+                            <div class="contact__form-group">
                                 <label for="name">Nome Completo*</label>
-                                <input type="text" id="name" name="name" class="form-control" required>
+                                <input type="text" id="name" name="name" class="contact__form-control" required>
                             </div>
-                            <div class="form-group">
+                            <div class="contact__form-group">
                                 <label for="email">Email*</label>
-                                <input type="email" id="email" name="email" class="form-control" required>
+                                <input type="email" id="email" name="email" class="contact__form-control" required>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group">
+                        <div class="contact__form-row">
+                            <div class="contact__form-group">
                                 <label for="phone">Telefone</label>
-                                <input type="tel" id="phone" name="phone" class="form-control">
+                                <input type="tel" id="phone" name="phone" class="contact__form-control">
                             </div>
-                            <div class="form-group">
+                            <div class="contact__form-group">
                                 <label for="subject">Assunto*</label>
-                                <select id="subject" name="subject" class="form-control" required>
+                                <select id="subject" name="subject" class="contact__form-control" required>
                                     <option value="">Selecione...</option>
                                     <option value="projeto">Novo Projeto</option>
                                     <option value="orcamento">Solicitar Orçamento</option>
@@ -369,62 +457,62 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="contact__form-group">
                             <label for="message">Mensagem*</label>
-                            <textarea id="message" name="message" class="form-control" required></textarea>
+                            <textarea id="message" name="message" class="contact__form-control" required></textarea>
                         </div>
-                        <div class="form-group">
+                        <div class="contact__form-group">
                             <label for="file">Anexar Arquivo (opcional)</label>
-                            <input type="file" id="file" name="file" class="form-control">
+                            <input type="file" id="file" name="file" class="contact__form-control">
                             <p style="margin-top: 5px; font-size: 14px; color: #666;">Formatos aceitos: PDF, STL, JPG, PNG (Max: 10MB)</p>
                         </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                        <div class="contact__form-group">
+                            <button type="submit" class="contact__submit-btn">Enviar Mensagem</button>
                         </div>
                     </form>
                 </div>
             </div>
 
-            <div class="map-section">
-                <div class="map-container">
+            <div class="contact__map-section">
+                <div class="contact__map-container">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.912624401711!2d-43.977269384108694!3d-19.93832068659172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6bfcbee3639bf%3A0x2d572da945cf9d5a!2sAv.%20Amazonas%2C%205253%20-%20Nova%20Su%C3%AD%C3%A7a%2C%20Belo%20Horizonte%20-%20MG%2C%2030421-169!5e0!3m2!1spt-BR!2sbr!4v1623252345678!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
 
-            <div class="faq-section">
-                <div class="faq-container">
-                    <div class="faq-intro">
+            <div class="contact__faq-section">
+                <div class="contact__faq-container">
+                    <div class="contact__faq-intro">
                         <h3>Perguntas Frequentes</h3>
                         <p>Confira as respostas para as dúvidas mais comuns sobre nossos serviços</p>
                     </div>
-                    <div class="faq-list">
-                        <div class="faq-item active">
-                            <div class="faq-question">Como faço para solicitar um orçamento para impressão 3D?</div>
-                            <div class="faq-answer">
+                    <div class="contact__faq-list">
+                        <div class="contact__faq-item active">
+                            <div class="contact__faq-question">Como faço para solicitar um orçamento para impressão 3D?</div>
+                            <div class="contact__faq-answer">
                                 <p>Para solicitar um orçamento, você pode preencher o formulário de contato nesta página, enviar um email para orçamentos@gabriel3d.com.br ou ligar para (31) 3333-4444. É útil incluir detalhes como o tipo de projeto, dimensões aproximadas, finalidade, material desejado e, se possível, anexar arquivos ou imagens de referência.</p>
                             </div>
                         </div>
-                        <div class="faq-item">
-                            <div class="faq-question">Quais formatos de arquivo vocês aceitam para impressão 3D?</div>
-                            <div class="faq-answer">
+                        <div class="contact__faq-item">
+                            <div class="contact__faq-question">Quais formatos de arquivo vocês aceitam para impressão 3D?</div>
+                            <div class="contact__faq-answer">
                                 <p>Aceitamos principalmente arquivos nos formatos STL, OBJ, STEP e 3MF. Caso você tenha um arquivo em outro formato, entre em contato conosco para verificarmos a compatibilidade. Se você não possui um modelo 3D, também oferecemos serviços de modelagem a partir de desenhos, fotos ou descrições.</p>
                             </div>
                         </div>
-                        <div class="faq-item">
-                            <div class="faq-question">Qual o prazo médio para entrega de um projeto?</div>
-                            <div class="faq-answer">
+                        <div class="contact__faq-item">
+                            <div class="contact__faq-question">Qual o prazo médio para entrega de um projeto?</div>
+                            <div class="contact__faq-answer">
                                 <p>O prazo de entrega varia de acordo com a complexidade do projeto, material utilizado, acabamento necessário e volume de trabalho atual. Projetos simples em materiais comuns podem ser entregues em 3-5 dias úteis. Projetos mais complexos ou que necessitam de acabamentos especiais podem levar de 1 a 3 semanas. Sempre fornecemos um prazo estimado após a análise do seu projeto.</p>
                             </div>
                         </div>
-                        <div class="faq-item">
-                            <div class="faq-question">Vocês oferecem serviço de entrega ou envio?</div>
-                            <div class="faq-answer">
+                        <div class="contact__faq-item">
+                            <div class="contact__faq-question">Vocês oferecem serviço de entrega ou envio?</div>
+                            <div class="contact__faq-answer">
                                 <p>Sim, oferecemos serviço de entrega em Belo Horizonte e região metropolitana, e também realizamos envios para todo o Brasil via transportadoras e Correios. O custo e prazo de envio serão calculados com base no peso, dimensões do pacote e localização de entrega.</p>
                             </div>
                         </div>
-                        <div class="faq-item">
-                            <div class="faq-question">Quais materiais vocês utilizam para impressão 3D?</div>
-                            <div class="faq-answer">
+                        <div class="contact__faq-item">
+                            <div class="contact__faq-question">Quais materiais vocês utilizam para impressão 3D?</div>
+                            <div class="contact__faq-answer">
                                 <p>Trabalhamos com uma ampla variedade de materiais, incluindo: PLA, ABS, PETG, Nylon, TPU (flexível), Resinas (padrão, transparente, resistente, biocompatível), Filamentos com fibra de carbono, filamentos com partículas de madeira, Poliamida (SLS), entre outros. A escolha do material ideal depende das características e requisitos do seu projeto.</p>
                             </div>
                         </div>
@@ -449,23 +537,35 @@
     <script>
         // FAQ Accordion
         document.addEventListener('DOMContentLoaded', function() {
-            const faqItems = document.querySelectorAll('.faq-item');
+            const faqItems = document.querySelectorAll('.contact__faq-item');
             
             faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
+                const question = item.querySelector('.contact__faq-question');
                 
                 question.addEventListener('click', () => {
-                    // Close all other items
+                    // Verifica se o item clicado já está ativo
+                    const isActive = item.classList.contains('active');
+                    
+                    // Fecha todos os itens
                     faqItems.forEach(otherItem => {
                         if (otherItem !== item && otherItem.classList.contains('active')) {
                             otherItem.classList.remove('active');
                         }
                     });
                     
-                    // Toggle current item
-                    item.classList.toggle('active');
+                    // Toggle o item atual (apenas adiciona a classe se não estiver ativo)
+                    if (!isActive) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
                 });
             });
+            
+            // Garante que pelo menos um item esteja aberto inicialmente
+            if (!document.querySelector('.contact__faq-item.active')) {
+                faqItems[0].classList.add('active');
+            }
             
             // Form submission handling
             const contactForm = document.getElementById('contactForm');

@@ -1,0 +1,532 @@
+/* 
+ * CORREÇÃO DE ESTILOS PARA A PÁGINA DE PROJETOS
+ * Este arquivo corrige problemas de layout e design na página de projetos
+ */
+
+/* Definição de variáveis essenciais que podem estar faltando */
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #333;
+    --accent-color: #00a8ff;
+    --dark-color: #111;
+    --light-color: #f4f4f4;
+    --gray-color: #666;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --border-radius: 8px;
+    
+    /* Adicionais para melhorar o design */
+    --card-bg: #ffffff;
+    --card-hover-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    --grid-gap: 25px;
+}
+
+/* Garantindo que o container tenha largura completa e centralizado */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero section de projetos */
+.page-hero--centered {
+    background-color: var(--primary-color);
+    background-image: linear-gradient(135deg, var(--primary-color) 0%, #004fa3 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.page-hero__content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-hero__title {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: white;
+}
+
+.page-hero__text {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* Filtros */
+.filter-controls {
+    background-color: #f9f9f9;
+    padding: 30px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.filter-controls__title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.filter-btn:hover, .filter-btn--active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.projects-counter {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 12px;
+    margin: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.projects-counter__value {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* Grade de projetos - CORRIGIDO */
+.content-grid {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+/* Garantir que o container da grade tenha largura completa */
+.content-grid .container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Corrigindo a grade de projetos para distribuição adequada */
+.projects {
+    display: grid;
+    /* Alterado para garantir melhor distribuição com vários itens por linha */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--grid-gap);
+    width: 100%;
+    justify-content: center;
+}
+
+/* Correção do problema de layout quebrado - ajuste de cada card */
+.content-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Garante que o card ocupe todo o espaço da célula */
+    margin: 0 auto; /* Centraliza na célula */
+    max-width: 100%; /* Impede que o card ultrapasse a largura da célula */
+}
+
+.content-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.card-image {
+    overflow: hidden;
+    height: 220px;
+    width: 100%;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.content-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-details {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.card-details__title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+.card-category {
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.card-description {
+    color: var(--gray-color);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+/* Especificações do projeto */
+.project-specs {
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.spec {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.spec:last-child {
+    margin-bottom: 0;
+}
+
+.property-name {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.property-value {
+    color: var(--gray-color);
+}
+
+.view-details {
+    margin-top: auto;
+    width: 100%;
+}
+
+/* Seção de destaque */
+.featured-section {
+    background-color: #f9f9f9;
+    padding: 70px 0;
+    margin-top: 50px;
+}
+
+.featured-section__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.featured-content__title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+    font-weight: 700;
+}
+
+.featured-content__subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.featured-content__text {
+    color: var(--gray-color);
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Destaques do projeto */
+.project-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.highlight {
+    background-color: white;
+    padding: 25px;
+    border-radius: var(--border-radius);
+}
+
+.highlight__icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(0, 102, 204, 0.1);
+    margin-bottom: 20px;
+}
+
+.highlight__icon i {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.highlight__title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+.highlight__text {
+    color: var(--gray-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.featured-image {
+    flex: 1;
+}
+
+.featured-image__img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+/* Seção de depoimentos */
+.testimonial-section {
+    padding: 70px 0;
+    background-color: white;
+}
+
+.testimonial-quote {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    position: relative;
+    box-shadow: var(--box-shadow);
+}
+
+.testimonial-quote__icon {
+    font-size: 50px;
+    color: var(--primary-color);
+    opacity: 0.1;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.testimonial-quote__text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: var(--dark-color);
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-author__image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.testimonial-author__name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.testimonial-author__role {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+/* Seção de chamada para ação */
+.cta-section {
+    background-color: var(--primary-color);
+    padding: 70px 0;
+    text-align: center;
+    color: white;
+}
+
+.cta-section__title {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.cta-section__text {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-buttons .btn--primary {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.cta-buttons .btn--primary:hover {
+    background-color: var(--dark-color);
+    color: white;
+}
+
+.cta-buttons .btn--secondary {
+    border-color: white;
+    color: white;
+}
+
+.cta-buttons .btn--secondary:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .projects {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .featured-section__container {
+        flex-direction: column;
+    }
+    
+    .featured-content {
+        order: 1;
+    }
+    
+    .featured-image {
+        order: 2;
+        margin-top: 30px;
+    }
+    
+    .projects {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero__title {
+        font-size: 2rem;
+    }
+    
+    .projects {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    
+    .project-highlights {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-buttons {
+        justify-content: center;
+    }
+    
+    .filter-btn {
+        margin-bottom: 8px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-image {
+        height: 180px;
+    }
+    
+    .card-details {
+        padding: 15px;
+    }
+    
+    .card-details__title {
+        font-size: 1.1rem;
+    }
+    
+    .project-specs {
+        padding: 15px;
+    }
+    
+    .spec {
+        grid-template-columns: 1fr;
+    }
+    
+    .property-value {
+        margin-top: 3px;
+    }
+    
+    .testimonial-quote__text {
+        font-size: 1rem;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.content-card {
+    animation: fadeIn 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.content-card:nth-child(1) { animation-delay: 0.1s; }
+.content-card:nth-child(2) { animation-delay: 0.2s; }
+.content-card:nth-child(3) { animation-delay: 0.3s; }
+.content-card:nth-child(4) { animation-delay: 0.4s; }
+.content-card:nth-child(5) { animation-delay: 0.5s; }
+.content-card:nth-child(6) { animation-delay: 0.6s; } 

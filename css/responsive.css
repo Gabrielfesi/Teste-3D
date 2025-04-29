@@ -12,27 +12,27 @@
     }
     
     /* Ajustes para a barra de navegação */
-    header .container {
+    .header__container {
         padding: 10px 15px;
     }
     
     /* Hero e banners */
-    .hero h2 {
+    .hero__title {
         font-size: 2.8rem;
     }
     
-    .page-hero .container,
-    .featured-section .container {
+    .page-hero__container,
+    .featured-section__container {
         flex-direction: column;
     }
     
-    .page-hero-image,
+    .page-hero__image,
     .featured-image {
         margin-top: 2rem;
         order: 2;
     }
     
-    .page-hero-content,
+    .page-hero__content,
     .featured-content {
         order: 1;
     }
@@ -62,7 +62,7 @@
     }
     
     /* Footer */
-    .footer-grid {
+    .footer__grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
@@ -87,12 +87,12 @@
         z-index: 50;
     }
     
-    nav.desktop-nav {
+    .header__nav.desktop-nav {
         display: none !important;
     }
     
     /* Header ajustes */
-    header .container {
+    .header__container {
         position: relative;
     }
     
@@ -113,21 +113,21 @@
     }
     
     /* Hero e banners */
-    .hero h2 {
+    .hero__title {
         font-size: 2.2rem;
     }
     
-    .hero p {
+    .hero__text {
         font-size: 1rem;
     }
     
-    .cta-buttons {
+    .hero__cta-buttons {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
     }
     
-    .cta-buttons .btn {
+    .hero__cta-buttons .btn {
         width: 100%;
         text-align: center;
     }
@@ -185,7 +185,7 @@
     }
     
     /* Logo */
-    .logo h1 {
+    .header__logo h1 {
         font-size: 1.4rem;
     }
     
@@ -194,7 +194,7 @@
         padding: 4rem 0;
     }
     
-    .hero h2 {
+    .hero__title {
         font-size: 1.8rem;
     }
     
@@ -223,38 +223,37 @@
         padding: 2rem 0;
     }
     
-    .featured-content h2 {
+    .featured-content__title {
         font-size: 1.5rem;
     }
     
-    .featured-content h3 {
+    .featured-content__subtitle {
         font-size: 1.3rem;
     }
     
     /* Footer */
-    .footer-grid {
+    .footer__grid {
         grid-template-columns: 1fr;
     }
     
-    .footer-col {
+    .footer__col {
         margin-bottom: 30px;
     }
     
     /* Botão WhatsApp */
-    .whatsapp-button a {
+    .whatsapp-button__link {
         width: 50px;
         height: 50px;
     }
     
-    .whatsapp-button a i {
+    .whatsapp-button__icon {
         font-size: 1.5rem;
     }
 }
 
-/* Suporte para telas muito pequenas */
 @media (max-width: 375px) {
-    .hero h2 {
-        font-size: 1.5rem;
+    .hero__title {
+        font-size: 1.6rem;
     }
     
     .filter-btn {

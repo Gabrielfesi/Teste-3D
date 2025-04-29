@@ -1,0 +1,65 @@
+/* Arquivo de alinhamento global para garantir texto alinhado à esquerda em todo o site */
+
+/* Reset de alinhamento para todo o conteúdo */
+body, 
+h1, h2, h3, h4, h5, h6, 
+p, 
+.container, 
+.section-title, 
+.hero, 
+.hero__content, 
+.features__card, 
+.products__card-content,
+.testimonials__card,
+.cta,
+.footer__copyright,
+.page-hero--centered,
+.page-hero__content,
+.page-hero-content,
+.contact-intro,
+.contact__info h3,
+.contact__info-content h4,
+.contact__form h3,
+.contact__faq-intro,
+.contact__faq-intro h3,
+.about-hero,
+.about-text,
+.mission-box, 
+.vision-box,
+.team-section,
+.member-info,
+.cta-section,
+.materials-intro-content,
+.card-details,
+.category-content,
+.service-details,
+.industry-card,
+.process-step,
+.faq-answer p {
+    text-align: left !important;
+}
+
+/* Alinhamento de elementos de conteúdo */
+.section-title::after,
+.contact-headline::after {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+/* Alinhamento de elementos flex */
+.hero__cta-buttons,
+.cta__buttons,
+.member-social,
+.consultation-content,
+.consultation-icons {
+    justify-content: flex-start !important;
+}
+
+/* Margens */
+.hero__content,
+.page-hero__content,
+.contact-description,
+.contact__faq-intro p {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+} 

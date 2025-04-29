@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços - Impressões 3D do Gabriel</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/alignment.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Estilos específicos para a página de serviços */
@@ -23,6 +23,7 @@
         
         .services-hero-content {
             flex: 1;
+            text-align: left;
         }
         
         .services-hero-content h1 {
@@ -62,43 +63,57 @@
         
         .service-content, .service-images {
             flex: 1;
+            text-align: left;
         }
         
         .service-content h2 {
             font-size: 2rem;
             margin-bottom: 1.5rem;
             color: var(--secondary-color);
+            text-align: left;
         }
         
         .service-content p {
             color: var(--gray-color);
             margin-bottom: 2rem;
             line-height: 1.7;
+            text-align: left;
         }
         
         .service-benefits, .service-process, .service-applications, .service-materials {
             margin-bottom: 2rem;
+            text-align: left;
         }
         
         .service-benefits h3, .service-process h3, 
-        .service-applications h3, .service-materials h3 {
+        .service-applications h3, .service-materials h3,
+        .service-types h3, .service-categories h3, 
+        .service-customization h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: var(--secondary-color);
+            text-align: left;
         }
         
-        .service-benefits ul, .service-applications ul, .service-types ul, .service-categories ul, .service-customization ul {
+        .service-benefits ul, .service-applications ul, 
+        .service-types ul, .service-categories ul, 
+        .service-customization ul {
             padding-left: 1.5rem;
+            text-align: left;
         }
         
-        .service-benefits li, .service-applications li, .service-types li, .service-categories li, .service-customization li {
+        .service-benefits li, .service-applications li, 
+        .service-types li, .service-categories li, 
+        .service-customization li {
             margin-bottom: 0.8rem;
             position: relative;
             list-style: none;
+            text-align: left;
         }
         
-        .service-benefits li:before, .service-applications li:before, .service-types li:before, 
-        .service-categories li:before, .service-customization li:before {
+        .service-benefits li:before, .service-applications li:before, 
+        .service-types li:before, .service-categories li:before, 
+        .service-customization li:before {
             content: '\f058';
             font-family: 'Font Awesome 6 Free';
             font-weight: 900;
@@ -117,6 +132,7 @@
             display: flex;
             align-items: flex-start;
             gap: 1rem;
+            text-align: left;
         }
         
         .step-icon {
@@ -134,10 +150,12 @@
         .step-content h4 {
             margin-bottom: 0.5rem;
             color: var(--secondary-color);
+            text-align: left;
         }
         
         .step-content p {
             margin-bottom: 0;
+            text-align: left;
         }
         
         .materials-grid {
@@ -150,11 +168,17 @@
             background-color: var(--light-color);
             padding: 1.5rem;
             border-radius: 8px;
+            text-align: left;
         }
         
         .material-item h4 {
             margin-bottom: 0.5rem;
             color: var(--secondary-color);
+            text-align: left;
+        }
+        
+        .material-item p {
+            text-align: left;
         }
         
         .main-image {
@@ -199,17 +223,20 @@
         
         .cta-content {
             flex: 1;
+            text-align: left;
         }
         
         .cta-content h2 {
             font-size: 2.2rem;
             margin-bottom: 1.5rem;
             color: var(--secondary-color);
+            text-align: left;
         }
         
         .cta-content p {
             margin-bottom: 2rem;
             color: var(--gray-color);
+            text-align: left;
         }
         
         .cta-image {
@@ -368,7 +395,6 @@
             <li><a href="b2b.html">B2B</a></li>
             <li><a href="personalizados.html">Personalizados</a></li>
             <li><a href="materiais.html">Materiais</a></li>
-            <li><a href="blog.html">Blog</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>
     </div>
@@ -616,6 +642,15 @@
                 </div>
             </div>
         </section>
+
+        <div class="banner">
+            <img src="../img/banner-projeto-impressao3d.svg" alt="Inicie seu projeto de impressão 3D" class="banner__image">
+            <div class="banner__content">
+                <h2 class="banner__title">Inicie seu projeto de impressão 3D</h2>
+                <p class="banner__text">Entre em contato e transforme suas ideias em realidade com nossas soluções de impressão 3D</p>
+                <a href="../pages/contato.html" class="btn btn--primary">Fale conosco</a>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -631,6 +666,7 @@
     <script src="../js/main.js"></script>
     <script src="../js/header.js"></script>
     <script src="../js/footer.js"></script>
+    <script src="../js/alignment.js"></script>
     <script src="../js/mobile-menu.js"></script>
 </body>
 </html> 

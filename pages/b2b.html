@@ -32,6 +32,12 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
         
         .service-image {
@@ -141,7 +147,9 @@
         }
         
         .benefits {
-            margin: 5rem 0;
+            background-color: var(--light-color);
+            padding: 5rem 0;
+            text-align: center;
         }
         
         .benefits-grid {
@@ -157,10 +165,14 @@
             background-color: white;
             box-shadow: var(--box-shadow);
             transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
         
         .benefit-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
         
         .benefit-card i {
@@ -172,6 +184,12 @@
         .benefit-card h3 {
             margin-bottom: 1rem;
             font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .benefit-card p {
+            color: var(--gray-color);
+            line-height: 1.6;
         }
         
         .clients {
@@ -256,7 +274,7 @@
                             <li><i class="fas fa-check-circle"></i> Acabamento profissional para apresentações</li>
                             <li><i class="fas fa-check-circle"></i> Suporte de design e engenharia</li>
                         </ul>
-                        <a href="#quote" class="btn primary">Solicitar Orçamento</a>
+                        <a href="#quote" class="btn btn--primary">Solicitar Orçamento</a>
                     </div>
                 </div>
                 
@@ -273,7 +291,7 @@
                             <li><i class="fas fa-check-circle"></i> Produção em lotes pequenos ou individuais</li>
                             <li><i class="fas fa-check-circle"></i> Entrega rápida para minimizar tempo de inatividade</li>
                         </ul>
-                        <a href="#quote" class="btn primary">Solicitar Orçamento</a>
+                        <a href="#quote" class="btn btn--primary">Solicitar Orçamento</a>
                     </div>
                 </div>
                 
@@ -290,7 +308,7 @@
                             <li><i class="fas fa-check-circle"></i> Controle de qualidade rigoroso</li>
                             <li><i class="fas fa-check-circle"></i> Escalabilidade conforme demanda</li>
                         </ul>
-                        <a href="#quote" class="btn primary">Solicitar Orçamento</a>
+                        <a href="#quote" class="btn btn--primary">Solicitar Orçamento</a>
                     </div>
                 </div>
                 
@@ -307,7 +325,7 @@
                             <li><i class="fas fa-check-circle"></i> Otimização de designs para impressão 3D</li>
                             <li><i class="fas fa-check-circle"></i> Implementação de fluxos de trabalho eficientes</li>
                         </ul>
-                        <a href="#quote" class="btn primary">Solicitar Orçamento</a>
+                        <a href="#quote" class="btn btn--primary">Solicitar Orçamento</a>
                     </div>
                 </div>
             </div>
