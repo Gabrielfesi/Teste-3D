@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços - Impressões 3D do Gabriel</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Estilos específicos para a página de serviços */
@@ -86,17 +87,18 @@
             color: var(--secondary-color);
         }
         
-        .service-benefits ul, .service-applications ul, .service-types ul {
+        .service-benefits ul, .service-applications ul, .service-types ul, .service-categories ul, .service-customization ul {
             padding-left: 1.5rem;
         }
         
-        .service-benefits li, .service-applications li, .service-types li {
+        .service-benefits li, .service-applications li, .service-types li, .service-categories li, .service-customization li {
             margin-bottom: 0.8rem;
             position: relative;
             list-style: none;
         }
         
-        .service-benefits li:before, .service-applications li:before, .service-types li:before {
+        .service-benefits li:before, .service-applications li:before, .service-types li:before, 
+        .service-categories li:before, .service-customization li:before {
             content: '\f058';
             font-family: 'Font Awesome 6 Free';
             font-weight: 900;
@@ -183,13 +185,113 @@
             transform: scale(1.05);
         }
         
+        /* CTA Section */
+        .service-cta {
+            background-color: var(--light-color);
+            padding: 5rem 0;
+        }
+        
+        .service-cta .container {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .cta-content {
+            flex: 1;
+        }
+        
+        .cta-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .cta-content p {
+            margin-bottom: 2rem;
+            color: var(--gray-color);
+        }
+        
+        .cta-image {
+            flex: 1;
+        }
+        
+        .cta-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--secondary-color);
+            z-index: 50;
+        }
+        
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        
+        .mobile-nav.active {
+            display: flex;
+        }
+        
+        .mobile-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        
+        .mobile-nav li {
+            margin: 1.5rem 0;
+        }
+        
+        .mobile-nav a {
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+        
+        .mobile-nav a:hover {
+            color: var(--primary-color);
+        }
+        
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+        
         @media (max-width: 992px) {
             .services-hero .container,
-            .service-detailed .container {
+            .service-detailed .container,
+            .service-cta .container {
                 flex-direction: column;
             }
             
-            .services-hero-image {
+            .services-hero-image,
+            .cta-image {
                 order: -1;
             }
             
@@ -203,14 +305,46 @@
         }
         
         @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            nav.desktop-nav {
+                display: none;
+            }
+            
             .image-gallery {
                 grid-template-columns: 1fr 1fr;
+            }
+            
+            .service-detailed {
+                padding: 3rem 0;
+            }
+            
+            .service-content h2 {
+                font-size: 1.8rem;
+            }
+            
+            .service-content h3 {
+                font-size: 1.3rem;
             }
         }
         
         @media (max-width: 576px) {
             .image-gallery {
                 grid-template-columns: 1fr;
+            }
+            
+            .services-hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .services-hero-content p {
+                font-size: 1rem;
+            }
+            
+            .cta-content h2 {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -219,6 +353,25 @@
     <header>
         <!-- O conteúdo do cabeçalho será inserido via JavaScript -->
     </header>
+    
+    <!-- Menu mobile -->
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="close-menu">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html" class="active">Serviços</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="loja.html">Loja</a></li>
+            <li><a href="b2b.html">B2B</a></li>
+            <li><a href="personalizados.html">Personalizados</a></li>
+            <li><a href="materiais.html">Materiais</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </div>
 
     <main>
         <section class="services-hero">
@@ -228,7 +381,7 @@
                     <p>Soluções completas em impressão 3D para transformar suas ideias em realidade com precisão e qualidade.</p>
                 </div>
                 <div class="services-hero-image">
-                    <img src="https://www.zmorph3d.com/wp-content/uploads/2020/03/Additive-manufacturing-3d-printing-services.jpg" alt="Serviços de Impressão 3D">
+                    <img src="../img/servicos-impressao.svg" alt="Serviços de Impressão 3D">
                 </div>
             </div>
         </section>
@@ -298,12 +451,12 @@
                 
                 <div class="service-images">
                     <div class="main-image">
-                        <img src="https://www.sculpteo.com/wp-content/uploads/imageedit_16_6378558591.jpg" alt="Prototipagem Rápida">
+                        <img src="../img/prototipagem-banner.svg" alt="Prototipagem Rápida">
                     </div>
                     <div class="image-gallery">
-                        <img src="https://www.sculpteo.com/wp-content/uploads/2018/02/The-State-of-3D-Printing-2018-Sculpteo-report-rapid-prototyping-technologies-1.jpg" alt="Exemplo de Protótipo 1">
-                        <img src="https://i.all3dp.com/wp-content/uploads/2021/08/29120000/a-prototype-of-a-medical-device-developed-by-rosti-3dpbm-210829.jpg" alt="Exemplo de Protótipo 2">
-                        <img src="https://formlabs.com/wp-content/uploads/2022/04/rapid-prototyping-anatomy.jpg" alt="Exemplo de Protótipo 3">
+                        <img src="../img/prototipo-1.svg" alt="Exemplo de Protótipo 1">
+                        <img src="../img/prototipo-2.svg" alt="Exemplo de Protótipo 2">
+                        <img src="../img/prototipo-3.svg" alt="Exemplo de Protótipo 3">
                     </div>
                 </div>
             </div>
@@ -313,12 +466,12 @@
             <div class="container">
                 <div class="service-images">
                     <div class="main-image">
-                        <img src="https://www.markforged.com/hubfs/The-Factory-of-the-Future-Metal-X-X7-Functional-End-Use-3D-Printed-Parts.jpg" alt="Peças Funcionais">
+                        <img src="../img/pecas-funcionais-banner.svg" alt="Peças Funcionais">
                     </div>
                     <div class="image-gallery">
-                        <img src="https://www.3erp.com/wp-content/uploads/2018/08/3D-printed-functional-metal-parts.jpg" alt="Exemplo de Peça Funcional 1">
-                        <img src="https://cdn.thomasnet.com/insights-images/embedded-images/9f9f8dbd-b3b1-48b0-9e52-76c86e47c0b1/7ecdbca8-1cee-4476-b313-7a57c0ca6af6/FullHD/functional-3d-printed-parts.jpg" alt="Exemplo de Peça Funcional 2">
-                        <img src="https://www.shapeways.com/blog/wp-content/uploads/2022/09/nylon-PA11-functional-prototypes-3D-printing-1.jpg" alt="Exemplo de Peça Funcional 3">
+                        <img src="../img/peca-1.svg" alt="Exemplo de Peça Funcional 1">
+                        <img src="../img/peca-2.svg" alt="Exemplo de Peça Funcional 2">
+                        <img src="../img/peca-3.svg" alt="Exemplo de Peça Funcional 3">
                     </div>
                 </div>
                 
@@ -397,12 +550,12 @@
                 
                 <div class="service-images">
                     <div class="main-image">
-                        <img src="https://jag3d.com/wp-content/uploads/2023/04/3d-printing-education-medical.jpg" alt="Modelos Educacionais">
+                        <img src="../img/modelos-educacionais.svg" alt="Modelos Educacionais">
                     </div>
                     <div class="image-gallery">
-                        <img src="https://formlabs.com/wp-content/uploads/2023/07/1080-3D-Printing-in-Medicine-Anatomical-Models-Cardiac.jpg" alt="Modelo Anatômico">
-                        <img src="https://www.3dsourced.com/wp-content/uploads/2022/05/Educational-3d-printed-model.jpg" alt="Modelo Geográfico">
-                        <img src="https://imgs.search.brave.com/ZRbCPzh-WvZ2oDx-bm_gZXvw62Hv5L7qh2xTR-LNsYQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5zcHJpbmdlcm5h/dHVyZS5jb20vbG9v/c2UveHMvaW5kZXgv/ZGI5N2IyYWRlZmIw/YTY4YzdkNGZlMWU1/ODFlZDNkYmZjMDk1/YWJiZGVjYjVkN2U5/YzU5MDA0ZDdiYzkw/NjQtMTU5Mi5qcGc_/YXM9d2VicCZmaWxs/PTAuNw" alt="Modelo Molecular">
+                        <img src="../img/modelo-anatomico.svg" alt="Modelo Anatômico">
+                        <img src="../img/modelo-geografico.svg" alt="Modelo Geográfico">
+                        <img src="../img/modelo-molecular.svg" alt="Modelo Molecular">
                     </div>
                 </div>
             </div>
@@ -412,12 +565,12 @@
             <div class="container">
                 <div class="service-images">
                     <div class="main-image">
-                        <img src="https://www.sculpteo.com/blog/wp-content/uploads/2020/08/decorative-objects.jpg" alt="Objetos Decorativos">
+                        <img src="../img/objetos-decorativos-banner.svg" alt="Objetos Decorativos">
                     </div>
                     <div class="image-gallery">
-                        <img src="https://www.pngkey.com/png/detail/135-1354410_3d-printer-printed-vase-3d-printed-decorative-objects.png" alt="Objeto Decorativo 1">
-                        <img src="https://www.qoobaa.com/wp-content/uploads/2019/03/Jelly_box_lamp.jpg" alt="Objeto Decorativo 2">
-                        <img src="https://www.jabil.com/dam/jcr:cb6d1fec-f7a0-449b-ad9b-d8a31a2b0fd0/figure-1-home-decor.JPG" alt="Objeto Decorativo 3">
+                        <img src="../img/decoracao-1.svg" alt="Objeto Decorativo 1">
+                        <img src="../img/decoracao-2.svg" alt="Objeto Decorativo 2">
+                        <img src="../img/decoracao-3.svg" alt="Objeto Decorativo 3">
                     </div>
                 </div>
                 
@@ -478,5 +631,6 @@
     <script src="../js/main.js"></script>
     <script src="../js/header.js"></script>
     <script src="../js/footer.js"></script>
+    <script src="../js/mobile-menu.js"></script>
 </body>
 </html> 

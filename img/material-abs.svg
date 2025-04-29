@@ -1,0 +1,28 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#f0f0f0"/>
+  
+  <!-- Rolo de filamento ABS -->
+  <circle cx="200" cy="200" r="120" fill="#e74c3c"/>
+  <circle cx="200" cy="200" r="40" fill="#f0f0f0"/>
+  
+  <!-- Símbolos químicos para Acrilonitrila, Butadieno e Estireno -->
+  <circle cx="120" cy="120" r="30" fill="#c0392b"/>
+  <text x="120" cy="125" font-family="Arial" font-size="16" text-anchor="middle" fill="white">A</text>
+  
+  <circle cx="200" cy="80" r="30" fill="#c0392b"/>
+  <text x="200" cy="85" font-family="Arial" font-size="16" text-anchor="middle" fill="white">B</text>
+  
+  <circle cx="280" cy="120" r="30" fill="#c0392b"/>
+  <text x="280" cy="125" font-family="Arial" font-size="16" text-anchor="middle" fill="white">E</text>
+  
+  <!-- Linhas conectando os símbolos -->
+  <line x1="150" y1="120" x2="170" y2="80" stroke="#c0392b" stroke-width="5"/>
+  <line x1="230" y1="80" x2="250" y2="120" stroke="#c0392b" stroke-width="5"/>
+  
+  <!-- Propriedades de resistência -->
+  <rect x="120" y="280" width="160" height="20" rx="5" fill="#c0392b"/>
+  <text x="200" y="295" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Alta Resistência</text>
+  
+  <text x="200" y="350" font-family="Arial" font-size="24" text-anchor="middle" fill="#333">ABS</text>
+  <text x="200" y="380" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">Acrilonitrila Butadieno Estireno</text>
+</svg> 

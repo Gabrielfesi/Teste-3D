@@ -21,9 +21,10 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="logo">
             <h1>Impressões 3D do Gabriel</h1>
         </div>
-        <nav>
+        <nav class="desktop-nav">
             <ul>
-                <li><a href="${homePrefix}index.html" class="${isActive('/index.html') ? 'active' : ''}">Home</a></li>
+                <li><a href="${homePrefix}index.html" class="${isActive('/index.html') ? 'active' : ''}">Início</a></li>
+                <li><a href="${pagesPrefix}sobre.html" class="${isActive('sobre.html') ? 'active' : ''}">Sobre</a></li>
                 <li><a href="${pagesPrefix}servicos.html" class="${isActive('servicos.html') ? 'active' : ''}">Serviços</a></li>
                 <li><a href="${pagesPrefix}projetos.html" class="${isActive('projetos.html') ? 'active' : ''}">Projetos</a></li>
                 <li><a href="${pagesPrefix}loja.html" class="${isActive('loja.html') ? 'active' : ''}">Loja</a></li>
@@ -31,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 <li><a href="${pagesPrefix}personalizados.html" class="${isActive('personalizados.html') ? 'active' : ''}">Personalizados</a></li>
                 <li><a href="${pagesPrefix}materiais.html" class="${isActive('materiais.html') ? 'active' : ''}">Materiais</a></li>
                 <li><a href="${pagesPrefix}blog.html" class="${isActive('blog.html') ? 'active' : ''}">Blog</a></li>
-                <li><a href="${pagesPrefix}sobre.html" class="${isActive('sobre.html') ? 'active' : ''}">Sobre</a></li>
                 <li><a href="${pagesPrefix}contato.html" class="${isActive('contato.html') ? 'active' : ''}">Contato</a></li>
             </ul>
         </nav>

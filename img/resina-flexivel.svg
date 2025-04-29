@@ -1,0 +1,25 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#f0f0f0"/>
+  
+  <!-- Frasco de resina -->
+  <rect x="130" y="100" width="140" height="200" rx="10" fill="#9b59b6"/>
+  <rect x="140" y="80" width="120" height="20" rx="5" fill="#8e44ad"/>
+  <rect x="190" y="60" width="20" height="20" fill="#8e44ad"/>
+  
+  <!-- Peças flexíveis -->
+  <path d="M 100,320 Q 120,340 140,320 Q 160,300 180,320 Q 200,340 220,320" stroke="#9b59b6" stroke-width="10" fill="none"/>
+  <path d="M 240,320 Q 260,300 280,320 Q 300,340 320,320" stroke="#9b59b6" stroke-width="10" fill="none"/>
+  
+  <!-- Seta de flexibilidade -->
+  <path d="M 160,240 Q 200,220 240,240 Q 200,260 160,240 Z" fill="#9b59b6" fill-opacity="0.5"/>
+  <path d="M 180,240 L 220,240" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5,2"/>
+  
+  <!-- Efeito de transparência -->
+  <rect x="170" y="150" width="60" height="100" fill="#9b59b6" fill-opacity="0.5"/>
+  
+  <!-- Rótulo do frasco -->
+  <rect x="145" y="180" width="110" height="40" rx="5" fill="white"/>
+  <text x="200" y="205" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Flexível</text>
+  
+  <text x="200" y="50" font-family="Arial" font-size="18" text-anchor="middle" fill="#333">Resina Flexível</text>
+</svg> 

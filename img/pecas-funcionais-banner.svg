@@ -1,0 +1,47 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#f0f0f0"/>
+  
+  <!-- Fundo -->
+  <rect x="50" y="50" width="700" height="300" rx="10" fill="#ecf0f1"/>
+  
+  <!-- Engrenagens -->
+  <circle cx="200" cy="180" r="80" fill="#3498db" stroke="#2980b9" stroke-width="3"/>
+  <circle cx="200" cy="180" r="20" fill="#2980b9"/>
+  
+  <!-- Dentes da engrenagem grande -->
+  <rect x="190" y="90" width="20" height="20" fill="#3498db"/>
+  <rect x="230" y="110" width="20" height="20" fill="#3498db"/>
+  <rect x="250" y="150" width="20" height="20" fill="#3498db"/>
+  <rect x="250" y="190" width="20" height="20" fill="#3498db"/>
+  <rect x="230" y="230" width="20" height="20" fill="#3498db"/>
+  <rect x="190" y="250" width="20" height="20" fill="#3498db"/>
+  <rect x="150" y="230" width="20" height="20" fill="#3498db"/>
+  <rect x="130" y="190" width="20" height="20" fill="#3498db"/>
+  <rect x="130" y="150" width="20" height="20" fill="#3498db"/>
+  <rect x="150" y="110" width="20" height="20" fill="#3498db"/>
+  
+  <!-- Engrenagem menor -->
+  <circle cx="350" cy="250" r="40" fill="#e74c3c" stroke="#c0392b" stroke-width="3"/>
+  <circle cx="350" cy="250" r="10" fill="#c0392b"/>
+  
+  <!-- Dentes da engrenagem menor -->
+  <rect x="345" y="205" width="10" height="10" fill="#e74c3c"/>
+  <rect x="365" y="215" width="10" height="10" fill="#e74c3c"/>
+  <rect x="375" y="235" width="10" height="10" fill="#e74c3c"/>
+  <rect x="375" y="255" width="10" height="10" fill="#e74c3c"/>
+  <rect x="365" y="275" width="10" height="10" fill="#e74c3c"/>
+  <rect x="345" y="285" width="10" height="10" fill="#e74c3c"/>
+  <rect x="325" y="275" width="10" height="10" fill="#e74c3c"/>
+  <rect x="315" y="255" width="10" height="10" fill="#e74c3c"/>
+  <rect x="315" y="235" width="10" height="10" fill="#e74c3c"/>
+  <rect x="325" y="215" width="10" height="10" fill="#e74c3c"/>
+  
+  <!-- Peça mecânica -->
+  <rect x="450" y="100" width="200" height="40" rx="5" fill="#f1c40f"/>
+  <rect x="500" y="140" width="100" height="100" rx="5" fill="#f39c12"/>
+  <circle cx="550" cy="190" r="30" fill="#ecf0f1"/>
+  <rect x="450" y="160" width="50" height="20" rx="5" fill="#f1c40f"/>
+  <rect x="450" y="200" width="50" height="20" rx="5" fill="#f1c40f"/>
+  
+  <text x="400" y="350" font-family="Arial" font-size="24" text-anchor="middle" fill="#333">Peças Funcionais</text>
+</svg> 

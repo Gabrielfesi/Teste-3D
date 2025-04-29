@@ -5,121 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos - Impressões 3D do Gabriel</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Estilos específicos para a página de projetos */
-        .projects-hero {
-            background-color: var(--light-color);
-            padding: 5rem 0;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .projects-hero-content h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--secondary-color);
-        }
-        
-        .projects-hero-content p {
-            font-size: 1.1rem;
-            color: var(--gray-color);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .project-filters {
-            margin-bottom: 3rem;
-        }
-        
-        .filter-controls {
-            text-align: center;
-        }
-        
-        .filter-controls h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--secondary-color);
-        }
-        
-        .filter-buttons {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        
-        .filter-btn {
-            background: white;
-            border: 1px solid #ddd;
-            padding: 8px 16px;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-        
-        .filter-btn.active, .filter-btn:hover {
-            background: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
-        }
-        
-        .projects-grid {
-            padding-bottom: 5rem;
-        }
-        
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-        
-        .project-card {
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-        }
-        
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-        
-        .project-image {
-            height: 250px;
-        }
-        
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .project-details {
-            padding: 1.5rem;
-        }
-        
-        .project-details h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--secondary-color);
-        }
-        
-        .project-category {
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
-        
-        .project-description {
-            color: var(--gray-color);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-        
         .project-specs {
             background-color: var(--light-color);
             padding: 1rem;
@@ -135,18 +24,125 @@
             margin-bottom: 0;
         }
         
-        .spec-title {
-            font-weight: 600;
+        .project-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .highlight {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .highlight-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .highlight-content h4 {
+            margin-bottom: 0.5rem;
             color: var(--secondary-color);
         }
         
-        .spec-value {
+        .highlight-content p {
             color: var(--gray-color);
+            font-size: 0.9rem;
+        }
+        
+        /* Contador de projetos */
+        .projects-counter {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: var(--light-color);
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .counter-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin: 0 0.5rem;
+        }
+        
+        /* Menu mobile - estilos mantidos para compatibilidade */
+        .mobile-menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--secondary-color);
+            z-index: 50;
+        }
+        
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        
+        .mobile-nav.active {
+            display: flex;
+        }
+        
+        .mobile-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        
+        .mobile-nav li {
+            margin: 1.5rem 0;
+        }
+        
+        .mobile-nav a {
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+        
+        .mobile-nav a:hover {
+            color: var(--primary-color);
+        }
+        
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
         }
         
         @media (max-width: 768px) {
-            .projects {
-                grid-template-columns: 1fr;
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            nav.desktop-nav {
+                display: none;
             }
         }
     </style>
@@ -155,56 +151,60 @@
     <header>
         <!-- O conteúdo do cabeçalho será inserido via JavaScript -->
     </header>
+    
+    <!-- O menu mobile agora será gerado via JavaScript -->
 
     <main>
-        <section class="projects-hero">
+        <section class="page-hero centered-hero">
             <div class="container">
-                <div class="projects-hero-content">
+                <div class="page-hero-content">
                     <h1>Nossos Projetos</h1>
                     <p>Explore alguns dos trabalhos que realizamos para nossos clientes. Cada projeto representa nossa dedicação à qualidade, inovação e precisão.</p>
                 </div>
             </div>
         </section>
 
-        <section class="project-filters">
+        <section class="filter-controls">
             <div class="container">
-                <div class="filter-controls">
-                    <h2>Filtrar por categoria:</h2>
-                    <div class="filter-buttons">
-                        <button class="filter-btn active" data-filter="all">Todos</button>
-                        <button class="filter-btn" data-filter="prototipo">Protótipos</button>
-                        <button class="filter-btn" data-filter="funcional">Peças Funcionais</button>
-                        <button class="filter-btn" data-filter="educacional">Modelos Educacionais</button>
-                        <button class="filter-btn" data-filter="decorativo">Objetos Decorativos</button>
-                    </div>
+                <h2>Filtrar por categoria:</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="prototipo">Protótipos</button>
+                    <button class="filter-btn" data-filter="funcional">Peças Funcionais</button>
+                    <button class="filter-btn" data-filter="educacional">Modelos Educacionais</button>
+                    <button class="filter-btn" data-filter="decorativo">Objetos Decorativos</button>
+                </div>
+                
+                <div class="projects-counter">
+                    <p>Mostrando <span class="counter-value" id="projetos-contador">6</span> projetos</p>
                 </div>
             </div>
         </section>
 
-        <section class="projects-grid">
+        <section class="content-grid">
             <div class="container">
                 <div class="projects">
                     <!-- Projeto 1 -->
-                    <div class="project-card" data-category="prototipo">
-                        <div class="project-image">
-                            <img src="https://cdn.pixabay.com/photo/2016/06/13/15/07/3d-printer-1454385_1280.jpg" alt="Protótipo de Componente Automotivo">
+                    <div class="content-card" data-category="prototipo">
+                        <div class="card-image">
+                            <img src="../img/prototipo-automotivo.svg" alt="Protótipo de Componente Automotivo">
                         </div>
-                        <div class="project-details">
+                        <div class="card-details">
                             <h3>Protótipo de Componente Automotivo</h3>
-                            <p class="project-category">Categoria: Protótipos</p>
-                            <p class="project-description">Desenvolvimento de um protótipo funcional para validação de design e ergonomia antes da produção em massa.</p>
+                            <p class="card-category">Categoria: Protótipos</p>
+                            <p class="card-description">Desenvolvimento de um protótipo funcional para validação de design e ergonomia antes da produção em massa.</p>
                             <div class="project-specs">
                                 <div class="spec">
-                                    <span class="spec-title">Material:</span>
-                                    <span class="spec-value">ABS de Alta Resistência</span>
+                                    <span class="property-name">Material:</span>
+                                    <span class="property-value">ABS de Alta Resistência</span>
                                 </div>
                                 <div class="spec">
-                                    <span class="spec-title">Dimensões:</span>
-                                    <span class="spec-value">220 x 150 x 80 mm</span>
+                                    <span class="property-name">Dimensões:</span>
+                                    <span class="property-value">220 x 150 x 80 mm</span>
                                 </div>
                                 <div class="spec">
-                                    <span class="spec-title">Tempo de Produção:</span>
-                                    <span class="spec-value">23 horas</span>
+                                    <span class="property-name">Tempo de Produção:</span>
+                                    <span class="property-value">23 horas</span>
                                 </div>
                             </div>
                             <a href="#" class="btn secondary view-details">Ver Detalhes</a>
@@ -212,26 +212,26 @@
                     </div>
 
                     <!-- Projeto 2 -->
-                    <div class="project-card" data-category="funcional">
-                        <div class="project-image">
-                            <img src="https://cdn.pixabay.com/photo/2019/07/10/10/04/3d-4328465_1280.jpg" alt="Peças de Reposição para Maquinário">
+                    <div class="content-card" data-category="funcional">
+                        <div class="card-image">
+                            <img src="../img/pecas-reposicao.svg" alt="Peças de Reposição para Maquinário">
                         </div>
-                        <div class="project-details">
+                        <div class="card-details">
                             <h3>Peças de Reposição para Maquinário</h3>
-                            <p class="project-category">Categoria: Peças Funcionais</p>
-                            <p class="project-description">Produção de componentes de reposição para máquinas obsoletas, permitindo estender sua vida útil.</p>
+                            <p class="card-category">Categoria: Peças Funcionais</p>
+                            <p class="card-description">Produção de componentes de reposição para máquinas obsoletas, permitindo estender sua vida útil.</p>
                             <div class="project-specs">
                                 <div class="spec">
-                                    <span class="spec-title">Material:</span>
-                                    <span class="spec-value">Nylon com Fibra de Carbono</span>
+                                    <span class="property-name">Material:</span>
+                                    <span class="property-value">Nylon com Fibra de Carbono</span>
                                 </div>
                                 <div class="spec">
-                                    <span class="spec-title">Quantidade:</span>
-                                    <span class="spec-value">8 peças</span>
+                                    <span class="property-name">Quantidade:</span>
+                                    <span class="property-value">8 peças</span>
                                 </div>
                                 <div class="spec">
-                                    <span class="spec-title">Durabilidade:</span>
-                                    <span class="spec-value">Superior às peças originais</span>
+                                    <span class="property-name">Durabilidade:</span>
+                                    <span class="property-value">Superior às peças originais</span>
                                 </div>
                             </div>
                             <a href="#" class="btn secondary view-details">Ver Detalhes</a>
@@ -239,26 +239,26 @@
                     </div>
 
                     <!-- Projeto 3 -->
-                    <div class="project-card" data-category="educacional">
-                        <div class="project-image">
-                            <img src="https://cdn.pixabay.com/photo/2019/01/31/09/24/anatomical-3966604_1280.jpg" alt="Modelo Anatômico para Educação Médica">
+                    <div class="content-card" data-category="educacional">
+                        <div class="card-image">
+                            <img src="../img/modelo-anatomico.svg" alt="Modelo Anatômico para Educação Médica">
                         </div>
-                        <div class="project-details">
+                        <div class="card-details">
                             <h3>Modelo Anatômico para Educação Médica</h3>
-                            <p class="project-category">Categoria: Modelos Educacionais</p>
-                            <p class="project-description">Conjunto de modelos anatômicos detalhados para faculdade de medicina, facilitando o aprendizado prático dos estudantes.</p>
+                            <p class="card-category">Categoria: Modelos Educacionais</p>
+                            <p class="card-description">Conjunto de modelos anatômicos detalhados para faculdade de medicina, facilitando o aprendizado prático dos estudantes.</p>
                             <div class="project-specs">
                                 <div class="spec">
-                                    <span class="spec-title">Material:</span>
-                                    <span class="spec-value">Resina Médica Certificada</span>
+                                    <span class="property-name">Material:</span>
+                                    <span class="property-value">Resina Médica Certificada</span>
                                 </div>
                                 <div class="spec">
-                                    <span class="spec-title">Resolução:</span>
-                                    <span class="spec-value">50 microns</span>
+                                    <span class="property-name">Resolução:</span>
+                                    <span class="property-value">50 microns</span>
                                 </div>
                                 <div class="spec">
-                                    <span class="spec-title">Detalhamento:</span>
-                                    <span class="spec-value">Ultra Preciso</span>
+                                    <span class="property-name">Detalhamento:</span>
+                                    <span class="property-value">Ultra Preciso</span>
                                 </div>
                             </div>
                             <a href="#" class="btn secondary view-details">Ver Detalhes</a>
@@ -266,26 +266,26 @@
                     </div>
 
                     <!-- Projeto 4 -->
-                    <div class="project-card" data-category="decorativo">
-                        <div class="project-image">
-                            <img src="https://cdn.pixabay.com/photo/2020/02/25/09/57/3d-printing-4878833_1280.jpg" alt="Luminária Personalizada">
+                    <div class="content-card" data-category="decorativo">
+                        <div class="card-image">
+                            <img src="../img/luminaria.svg" alt="Luminária Personalizada">
                         </div>
-                        <div class="project-details">
+                        <div class="card-details">
                             <h3>Luminária Personalizada com Padrão Complexo</h3>
-                            <p class="project-category">Categoria: Objetos Decorativos</p>
-                            <p class="project-description">Criação de luminária com padrões geométricos complexos que criam efeitos de luz e sombra únicos.</p>
+                            <p class="card-category">Categoria: Objetos Decorativos</p>
+                            <p class="card-description">Criação de luminária com padrões geométricos complexos que criam efeitos de luz e sombra únicos.</p>
                             <div class="project-specs">
                                 <div class="spec">
-                                    <span class="spec-title">Material:</span>
-                                    <span class="spec-value">PLA Translúcido</span>
+                                    <span class="property-name">Material:</span>
+                                    <span class="property-value">PLA Translúcido</span>
                                 </div>
                                 <div class="spec">
-                                    <span class="spec-title">Dimensões:</span>
-                                    <span class="spec-value">30cm de diâmetro</span>
+                                    <span class="property-name">Dimensões:</span>
+                                    <span class="property-value">30cm de diâmetro</span>
                                 </div>
                                 <div class="spec">
-                                    <span class="spec-title">Acabamento:</span>
-                                    <span class="spec-value">Lixado e Polido</span>
+                                    <span class="property-name">Acabamento:</span>
+                                    <span class="property-value">Lixado e Polido</span>
                                 </div>
                             </div>
                             <a href="#" class="btn secondary view-details">Ver Detalhes</a>
@@ -293,26 +293,26 @@
                     </div>
 
                     <!-- Projeto 5 -->
-                    <div class="project-card" data-category="prototipo">
-                        <div class="project-image">
-                            <img src="https://cdn.pixabay.com/photo/2018/01/18/13/09/3d-3089810_1280.jpg" alt="Protótipo de Embalagem">
+                    <div class="content-card" data-category="prototipo">
+                        <div class="card-image">
+                            <img src="../img/prototipo-embalagem.svg" alt="Protótipo de Embalagem">
                         </div>
-                        <div class="project-details">
+                        <div class="card-details">
                             <h3>Protótipo de Embalagem Sustentável</h3>
-                            <p class="project-category">Categoria: Protótipos</p>
-                            <p class="project-description">Desenvolvimento de conceito de embalagem biodegradável com mecanismo de fechamento inovador.</p>
+                            <p class="card-category">Categoria: Protótipos</p>
+                            <p class="card-description">Desenvolvimento de conceito de embalagem biodegradável com mecanismo de fechamento inovador.</p>
                             <div class="project-specs">
                                 <div class="spec">
-                                    <span class="spec-title">Material:</span>
-                                    <span class="spec-value">PLA Biodegradável</span>
+                                    <span class="property-name">Material:</span>
+                                    <span class="property-value">PLA Biodegradável</span>
                                 </div>
                                 <div class="spec">
-                                    <span class="spec-title">Iterações:</span>
-                                    <span class="spec-value">5 versões</span>
+                                    <span class="property-name">Iterações:</span>
+                                    <span class="property-value">5 versões</span>
                                 </div>
                                 <div class="spec">
-                                    <span class="spec-title">Resultado:</span>
-                                    <span class="spec-value">Aprovado para produção</span>
+                                    <span class="property-name">Resultado:</span>
+                                    <span class="property-value">Aprovado para produção</span>
                                 </div>
                             </div>
                             <a href="#" class="btn secondary view-details">Ver Detalhes</a>
@@ -320,26 +320,26 @@
                     </div>
 
                     <!-- Projeto 6 -->
-                    <div class="project-card" data-category="funcional">
-                        <div class="project-image">
-                            <img src="https://cdn.pixabay.com/photo/2017/10/13/13/29/3d-printer-2847075_1280.jpg" alt="Ferramenta Customizada">
+                    <div class="content-card" data-category="funcional">
+                        <div class="card-image">
+                            <img src="../img/ferramenta-customizada.svg" alt="Ferramenta Customizada">
                         </div>
-                        <div class="project-details">
+                        <div class="card-details">
                             <h3>Ferramentas Customizadas para Indústria</h3>
-                            <p class="project-category">Categoria: Peças Funcionais</p>
-                            <p class="project-description">Conjunto de ferramentas ergonômicas desenvolvidas para processo industrial específico, aumentando a eficiência e reduzindo lesões.</p>
+                            <p class="card-category">Categoria: Peças Funcionais</p>
+                            <p class="card-description">Conjunto de ferramentas ergonômicas desenvolvidas para processo industrial específico, aumentando a eficiência e reduzindo lesões.</p>
                             <div class="project-specs">
                                 <div class="spec">
-                                    <span class="spec-title">Material:</span>
-                                    <span class="spec-value">PETG Reforçado</span>
+                                    <span class="property-name">Material:</span>
+                                    <span class="property-value">PETG Reforçado</span>
                                 </div>
                                 <div class="spec">
-                                    <span class="spec-title">Ergonomia:</span>
-                                    <span class="spec-value">Personalizada</span>
+                                    <span class="property-name">Ergonomia:</span>
+                                    <span class="property-value">Personalizada</span>
                                 </div>
                                 <div class="spec">
-                                    <span class="spec-title">Resistência:</span>
-                                    <span class="spec-value">Industrial</span>
+                                    <span class="property-name">Resistência:</span>
+                                    <span class="property-value">Industrial</span>
                                 </div>
                             </div>
                             <a href="#" class="btn secondary view-details">Ver Detalhes</a>
@@ -349,7 +349,7 @@
             </div>
         </section>
 
-        <section class="featured-project">
+        <section class="featured-section">
             <div class="container">
                 <div class="featured-content">
                     <h2>Projeto em Destaque</h2>
@@ -392,12 +392,12 @@
                 </div>
                 
                 <div class="featured-image">
-                    <img src="https://cdn.pixabay.com/photo/2016/12/15/20/28/hand-1909923_1280.jpg" alt="Prótese de Mão Personalizada">
+                    <img src="../img/protese-mao.svg" alt="Prótese de Mão Personalizada">
                 </div>
             </div>
         </section>
 
-        <section class="testimonial-project">
+        <section class="testimonial-section">
             <div class="container">
                 <div class="testimonial-content">
                     <div class="testimonial-quote">
@@ -406,7 +406,7 @@
                             A prótese que a Impressão 3D Brasil desenvolveu para mim mudou completamente minha qualidade de vida. A personalização e o cuidado com cada detalhe fizeram toda a diferença. Consigo realizar atividades que antes eram impossíveis, e o melhor, com conforto e naturalidade.
                         </blockquote>
                         <div class="testimonial-author">
-                            <img src="https://cdn.pixabay.com/photo/2017/08/01/01/33/bearded-2562683_1280.jpg" alt="Pedro Silva" class="author-image">
+                            <img src="../img/pedro-silva.svg" alt="Pedro Silva" class="author-image">
                             <div class="author-info">
                                 <h4>Pedro Silva</h4>
                                 <p>Usuário da prótese personalizada</p>
@@ -417,7 +417,7 @@
             </div>
         </section>
 
-        <section class="project-cta">
+        <section class="cta-section">
             <div class="container">
                 <h2>Tem um projeto em mente?</h2>
                 <p>Vamos transformar sua ideia em realidade com nossa tecnologia de impressão 3D.</p>
@@ -436,6 +436,7 @@
     <script src="../js/main.js"></script>
     <script src="../js/header.js"></script>
     <script src="../js/footer.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/filtros.js"></script>
+    <script src="../js/mobile-menu.js"></script>
 </body>
 </html> 

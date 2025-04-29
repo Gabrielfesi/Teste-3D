@@ -1,0 +1,11 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#f0f0f0"/>
+  <rect x="100" y="150" width="200" height="150" rx="10" fill="#8e44ad"/>
+  <rect x="120" y="170" width="160" height="110" rx="5" fill="#9b59b6"/>
+  <rect x="180" y="150" width="40" height="10" fill="#8e44ad"/>
+  <circle cx="140" cy="200" r="15" fill="#f1c40f"/>
+  <circle cx="180" cy="210" r="10" fill="#e74c3c"/>
+  <circle cx="210" cy="190" r="12" fill="#2ecc71"/>
+  <rect x="150" y="230" width="100" height="30" rx="5" fill="#7d3c98"/>
+  <text x="200" y="350" font-family="Arial" font-size="18" text-anchor="middle" fill="#333">Porta-Joias Personalizado</text>
+</svg> 

@@ -1,0 +1,12 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#f0f0f0"/>
+  <rect x="100" y="200" width="200" height="100" rx="5" fill="#3498db"/>
+  <rect x="120" y="180" width="50" height="20" rx="2" fill="#2980b9"/>
+  <rect x="180" y="160" width="40" height="40" rx="2" fill="#2980b9"/>
+  <rect x="230" y="180" width="50" height="20" rx="2" fill="#2980b9"/>
+  <rect x="120" y="220" width="30" height="60" rx="2" fill="#2ecc71"/>
+  <rect x="160" y="220" width="30" height="60" rx="2" fill="#e74c3c"/>
+  <rect x="200" y="220" width="30" height="60" rx="2" fill="#f1c40f"/>
+  <rect x="240" y="220" width="30" height="60" rx="2" fill="#9b59b6"/>
+  <text x="200" y="350" font-family="Arial" font-size="18" text-anchor="middle" fill="#333">Organizador de Mesa</text>
+</svg> 

@@ -1,0 +1,35 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#f0f0f0"/>
+  
+  <!-- Frasco de resina ABS -->
+  <rect x="130" y="100" width="140" height="200" rx="10" fill="#e74c3c"/>
+  <rect x="140" y="80" width="120" height="20" rx="5" fill="#c0392b"/>
+  <rect x="190" y="60" width="20" height="20" fill="#c0392b"/>
+  
+  <!-- Peças mecânicas impressas -->
+  <rect x="70" y="240" width="60" height="20" rx="2" fill="#bdc3c7" stroke="#7f8c8d" stroke-width="1"/>
+  <rect x="70" y="270" width="60" height="20" rx="2" fill="#bdc3c7" stroke="#7f8c8d" stroke-width="1"/>
+  <rect x="70" y="300" width="60" height="20" rx="2" fill="#bdc3c7" stroke="#7f8c8d" stroke-width="1"/>
+  
+  <!-- Engrenagem -->
+  <circle cx="280" cy="280" r="40" fill="#bdc3c7" stroke="#7f8c8d" stroke-width="2"/>
+  <circle cx="280" cy="280" r="15" fill="#f0f0f0" stroke="#7f8c8d" stroke-width="2"/>
+  
+  <!-- Dentes da engrenagem -->
+  <path d="M 280,240 L 290,230 L 300,240 L 290,250 Z" fill="#bdc3c7" stroke="#7f8c8d" stroke-width="1"/>
+  <path d="M 320,280 L 330,270 L 320,260 L 310,270 Z" fill="#bdc3c7" stroke="#7f8c8d" stroke-width="1"/>
+  <path d="M 280,320 L 270,330 L 260,320 L 270,310 Z" fill="#bdc3c7" stroke="#7f8c8d" stroke-width="1"/>
+  <path d="M 240,280 L 230,290 L 240,300 L 250,290 Z" fill="#bdc3c7" stroke="#7f8c8d" stroke-width="1"/>
+  
+  <!-- Símbolo de dureza/resistência -->
+  <path d="M 90,210 L 110,210 L 110,180 L 115,180 L 100,160 L 85,180 L 90,180 Z" fill="#e74c3c" stroke="#c0392b" stroke-width="1"/>
+  
+  <!-- Efeito de transparência -->
+  <rect x="170" y="150" width="60" height="100" fill="#e74c3c" fill-opacity="0.5"/>
+  
+  <!-- Rótulo do frasco -->
+  <rect x="145" y="180" width="110" height="40" rx="5" fill="white"/>
+  <text x="200" y="205" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">ABS</text>
+  
+  <text x="200" y="50" font-family="Arial" font-size="18" text-anchor="middle" fill="#333">Resina ABS</text>
+</svg> 

@@ -8,43 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Estilos específicos para a página de materiais */
-        .materials-hero {
-            padding: 5rem 0;
-            background-color: var(--light-color);
-        }
-        
-        .materials-hero .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 3rem;
-        }
-        
-        .materials-hero-content {
-            flex: 1;
-        }
-        
-        .materials-hero-content h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--secondary-color);
-        }
-        
-        .materials-hero-content p {
-            font-size: 1.1rem;
-            color: var(--gray-color);
-        }
-        
-        .materials-hero-image {
-            flex: 1;
-        }
-        
-        .materials-hero-image img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
-        }
-        
         .materials-intro {
             padding: 5rem 0;
             background-color: white;
@@ -54,137 +17,6 @@
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
-        }
-        
-        .materials-intro-content h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: var(--secondary-color);
-        }
-        
-        .materials-intro-content p {
-            color: var(--gray-color);
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-        
-        .material-categories {
-            padding: 5rem 0;
-            background-color: var(--light-color);
-        }
-        
-        .material-category {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
-            margin-bottom: 4rem;
-        }
-        
-        .material-category:last-child {
-            margin-bottom: 0;
-        }
-        
-        .category-image, .category-content {
-            flex: 1;
-        }
-        
-        .category-image img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
-        }
-        
-        .category-content h3 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: var(--secondary-color);
-        }
-        
-        .category-content p {
-            color: var(--gray-color);
-            margin-bottom: 2rem;
-            line-height: 1.7;
-        }
-        
-        .material-list {
-            padding: 5rem 0;
-        }
-        
-        .material-list h2 {
-            font-size: 2rem;
-            margin-bottom: 3rem;
-            text-align: center;
-            color: var(--secondary-color);
-        }
-        
-        .materials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-            gap: 2rem;
-        }
-        
-        .material-card {
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-            display: flex;
-            transition: var(--transition);
-        }
-        
-        .material-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-        
-        .material-image {
-            flex: 1;
-            max-width: 200px;
-        }
-        
-        .material-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .material-details {
-            flex: 2;
-            padding: 1.5rem;
-        }
-        
-        .material-details h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--secondary-color);
-        }
-        
-        .material-properties {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .property {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .property-name {
-            font-weight: 600;
-            color: var(--secondary-color);
-        }
-        
-        .property-rating {
-            color: var(--primary-color);
-        }
-        
-        .material-description {
-            color: var(--gray-color);
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
         }
         
         .material-applications h4 {
@@ -202,37 +34,72 @@
             color: var(--gray-color);
         }
         
-        @media (max-width: 992px) {
-            .materials-hero .container {
-                flex-direction: column;
-            }
-            
-            .materials-hero-image {
-                order: -1;
-            }
-            
-            .material-category {
-                flex-direction: column;
-                gap: 2rem;
-            }
-            
-            .materials-grid {
-                grid-template-columns: 1fr;
-            }
+        .material-consultation {
+            padding: 4rem 0;
+            background-color: var(--light-color);
         }
         
-        @media (max-width: 768px) {
-            .material-card {
+        .material-consultation .container {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .consultation-content {
+            flex: 1;
+        }
+        
+        .consultation-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .consultation-content p {
+            color: var(--gray-color);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        
+        .consultation-icons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+        
+        .consultation-icon {
+            text-align: center;
+        }
+        
+        .consultation-icon i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .consultation-icon span {
+            display: block;
+            color: var(--gray-color);
+        }
+        
+        .consultation-image {
+            flex: 1;
+        }
+        
+        .consultation-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        @media (max-width: 992px) {
+            .material-consultation .container {
                 flex-direction: column;
             }
             
-            .material-image {
-                max-width: 100%;
-                height: 200px;
-            }
-            
-            .material-properties {
-                grid-template-columns: 1fr;
+            .consultation-icons {
+                flex-direction: column;
+                gap: 2rem;
             }
         }
     </style>
@@ -243,14 +110,14 @@
     </header>
 
     <main>
-        <section class="materials-hero">
+        <section class="page-hero">
             <div class="container">
-                <div class="materials-hero-content">
+                <div class="page-hero-content">
                     <h1>Materiais para Impressão 3D</h1>
                     <p>Conheça os diversos materiais que utilizamos em nossos projetos, cada um com características específicas para atender às suas necessidades.</p>
                 </div>
-                <div class="materials-hero-image">
-                    <img src="https://3dlab.pe/wp-content/uploads/2022/12/materiales-impresion-3d-fdm-filamento-polimero-pla-tpu-petg-abs-nylon-pc-ht-resina-fotopolimero-laser-led-dlp-polyjet-sla-msla-dlp-3d-lab-peru-02-768x768.jpg" alt="Diversos materiais para impressão 3D">
+                <div class="page-hero-image">
+                    <img src="../img/materiais-hero.svg" alt="Diversos materiais para impressão 3D">
                 </div>
             </div>
         </section>
@@ -265,13 +132,13 @@
             </div>
         </section>
 
-        <section class="material-categories">
+        <section class="category-section">
             <div class="container">
                 <h2 class="section-title">Categorias de Materiais</h2>
                 
-                <div class="material-category">
+                <div class="category-row">
                     <div class="category-image">
-                        <img src="https://imgs.search.brave.com/dA9OfUvtYo2Q8Vx_c9g1O3FepE1Qv77dU8B5_v3HiA8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdHVk/aW8uY2FibGVsYWJz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMi8wNS9maWxh/bWVudC5qcGc" alt="Plásticos para impressão 3D">
+                        <img src="../img/materiais-plasticos.svg" alt="Plásticos para impressão 3D">
                     </div>
                     <div class="category-content">
                         <h3>Plásticos</h3>
@@ -280,20 +147,20 @@
                     </div>
                 </div>
                 
-                <div class="material-category">
+                <div class="category-row">
                     <div class="category-content">
                         <h3>Resinas</h3>
                         <p>As resinas são ideais para projetos que exigem alto nível de detalhamento e precisão, resultando em peças com acabamento excepcional.</p>
                         <a href="#resins" class="btn secondary">Ver Resinas</a>
                     </div>
                     <div class="category-image">
-                        <img src="https://imgs.search.brave.com/ZIDM_N-bjpA35eVj6gjJ_gMJiUd0kk3esDxQJ9YM-hc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzAx/MjkvMDQ4My85MDI1/L3Byb2R1Y3RzL0Vu/Z2luZWVyaW5nX1Jl/c2luX0JvdHRsZXNf/Y292ZXJfMmZjZTY2/NDAtY2IyMS00Zjll/LWE1N2UtNjljZWNm/ZGY0YTNjLmpwZz92/PTE2NDc4NzkxNTI" alt="Resinas para impressão 3D">
+                        <img src="../img/materiais-resinas.svg" alt="Resinas para impressão 3D">
                     </div>
                 </div>
                 
-                <div class="material-category">
+                <div class="category-row">
                     <div class="category-image">
-                        <img src="https://formlabs.com/media/upload/Ceramic-Spool-and-Parts.jpg" alt="Materiais especiais para impressão 3D">
+                        <img src="../img/materiais-especiais.svg" alt="Materiais especiais para impressão 3D">
                     </div>
                     <div class="category-content">
                         <h3>Materiais Especiais</h3>
@@ -304,19 +171,19 @@
             </div>
         </section>
 
-        <section id="plastics" class="material-list">
+        <section id="plastics" class="content-section">
             <div class="container">
-                <h2>Materiais Plásticos</h2>
+                <h2 class="section-title">Materiais Plásticos</h2>
                 
-                <div class="materials-grid">
-                    <div class="material-card">
-                        <div class="material-image">
-                            <img src="https://all3dp.com/app/uploads/2022/08/07100922/feature-PLA-filament-rolls-by-Fillamentum-in-multiple-colors-scaled.jpg" alt="PLA (Ácido Polilático)">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <div class="card-image">
+                            <img src="../img/material-pla.svg" alt="PLA (Ácido Polilático)">
                         </div>
-                        <div class="material-details">
+                        <div class="card-details">
                             <h3>PLA (Ácido Polilático)</h3>
-                            <div class="material-properties">
-                                <div class="property">
+                            <div class="properties-grid">
+                                <div class="property-item">
                                     <span class="property-name">Resistência:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -326,7 +193,7 @@
                                         <i class="far fa-star"></i>
                                     </span>
                                 </div>
-                                <div class="property">
+                                <div class="property-item">
                                     <span class="property-name">Flexibilidade:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -336,7 +203,7 @@
                                         <i class="far fa-star"></i>
                                     </span>
                                 </div>
-                                <div class="property">
+                                <div class="property-item">
                                     <span class="property-name">Durabilidade:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -346,7 +213,7 @@
                                         <i class="far fa-star"></i>
                                     </span>
                                 </div>
-                                <div class="property">
+                                <div class="property-item">
                                     <span class="property-name">Facilidade de impressão:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -357,7 +224,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <p class="material-description">Material biodegradável, ideal para protótipos, modelos de conceito e peças decorativas. Disponível em diversas cores e acabamentos.</p>
+                            <p class="card-description">Material biodegradável, ideal para protótipos, modelos de conceito e peças decorativas. Disponível em diversas cores e acabamentos.</p>
                             <div class="material-applications">
                                 <h4>Aplicações ideais:</h4>
                                 <ul>
@@ -370,14 +237,14 @@
                         </div>
                     </div>
                     
-                    <div class="material-card">
-                        <div class="material-image">
-                            <img src="https://www.simplify3d.com/wp-content/uploads/2023/03/abs-3D-printing-filament.jpg" alt="ABS (Acrilonitrila Butadieno Estireno)">
+                    <div class="content-card">
+                        <div class="card-image">
+                            <img src="../img/material-abs.svg" alt="ABS (Acrilonitrila Butadieno Estireno)">
                         </div>
-                        <div class="material-details">
+                        <div class="card-details">
                             <h3>ABS (Acrilonitrila Butadieno Estireno)</h3>
-                            <div class="material-properties">
-                                <div class="property">
+                            <div class="properties-grid">
+                                <div class="property-item">
                                     <span class="property-name">Resistência:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -387,7 +254,7 @@
                                         <i class="far fa-star"></i>
                                     </span>
                                 </div>
-                                <div class="property">
+                                <div class="property-item">
                                     <span class="property-name">Flexibilidade:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -397,7 +264,7 @@
                                         <i class="far fa-star"></i>
                                     </span>
                                 </div>
-                                <div class="property">
+                                <div class="property-item">
                                     <span class="property-name">Durabilidade:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -407,7 +274,7 @@
                                         <i class="far fa-star"></i>
                                     </span>
                                 </div>
-                                <div class="property">
+                                <div class="property-item">
                                     <span class="property-name">Facilidade de impressão:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -418,7 +285,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <p class="material-description">Material resistente e durável, ideal para peças funcionais que precisam suportar uso contínuo e condições adversas.</p>
+                            <p class="card-description">Material resistente e durável, ideal para peças funcionais que precisam suportar uso contínuo e condições adversas.</p>
                             <div class="material-applications">
                                 <h4>Aplicações ideais:</h4>
                                 <ul>
@@ -431,14 +298,14 @@
                         </div>
                     </div>
                     
-                    <div class="material-card">
-                        <div class="material-image">
-                            <img src="https://cdn.shopify.com/s/files/1/0259/1948/8059/files/petg-vs-pla.jpg?v=1652886592" alt="PETG (Polietileno Tereftalato de Glicol)">
+                    <div class="content-card">
+                        <div class="card-image">
+                            <img src="../img/material-petg.svg" alt="PETG (Polietileno Tereftalato de Glicol)">
                         </div>
-                        <div class="material-details">
+                        <div class="card-details">
                             <h3>PETG (Polietileno Tereftalato de Glicol)</h3>
-                            <div class="material-properties">
-                                <div class="property">
+                            <div class="properties-grid">
+                                <div class="property-item">
                                     <span class="property-name">Resistência:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -448,7 +315,7 @@
                                         <i class="far fa-star"></i>
                                     </span>
                                 </div>
-                                <div class="property">
+                                <div class="property-item">
                                     <span class="property-name">Flexibilidade:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -458,7 +325,7 @@
                                         <i class="far fa-star"></i>
                                     </span>
                                 </div>
-                                <div class="property">
+                                <div class="property-item">
                                     <span class="property-name">Durabilidade:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -468,7 +335,7 @@
                                         <i class="fas fa-star"></i>
                                     </span>
                                 </div>
-                                <div class="property">
+                                <div class="property-item">
                                     <span class="property-name">Facilidade de impressão:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -479,7 +346,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <p class="material-description">Combina a facilidade de impressão do PLA com a resistência do ABS. Excelente para peças que requerem durabilidade e resistência a impactos.</p>
+                            <p class="card-description">Combina a facilidade de impressão do PLA com a resistência do ABS. Excelente para peças que requerem durabilidade e resistência a impactos.</p>
                             <div class="material-applications">
                                 <h4>Aplicações ideais:</h4>
                                 <ul>
@@ -495,19 +362,19 @@
             </div>
         </section>
 
-        <section id="resins" class="material-list">
+        <section id="resins" class="content-section">
             <div class="container">
-                <h2>Resinas</h2>
+                <h2 class="section-title">Resinas</h2>
                 
-                <div class="materials-grid">
-                    <div class="material-card">
-                        <div class="material-image">
-                            <img src="https://www.3dnatives.com/es/wp-content/uploads/sites/4/3ddarius1.jpg" alt="Resina Standard">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <div class="card-image">
+                            <img src="../img/resina-standard.svg" alt="Resina Standard">
                         </div>
-                        <div class="material-details">
+                        <div class="card-details">
                             <h3>Resina Standard</h3>
-                            <div class="material-properties">
-                                <div class="property">
+                            <div class="properties-grid">
+                                <div class="property-item">
                                     <span class="property-name">Resolução:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -517,7 +384,7 @@
                                         <i class="fas fa-star"></i>
                                     </span>
                                 </div>
-                                <div class="property">
+                                <div class="property-item">
                                     <span class="property-name">Resistência:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -527,7 +394,7 @@
                                         <i class="far fa-star"></i>
                                     </span>
                                 </div>
-                                <div class="property">
+                                <div class="property-item">
                                     <span class="property-name">Durabilidade:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -538,7 +405,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <p class="material-description">Ideal para modelos de alta precisão que necessitam de detalhamento fino. Perfeita para protótipos de apresentação e modelos estéticos.</p>
+                            <p class="card-description">Ideal para modelos de alta precisão que necessitam de detalhamento fino. Perfeita para protótipos de apresentação e modelos estéticos.</p>
                             <div class="material-applications">
                                 <h4>Aplicações ideais:</h4>
                                 <ul>
@@ -551,14 +418,14 @@
                         </div>
                     </div>
                     
-                    <div class="material-card">
-                        <div class="material-image">
-                            <img src="https://formlabs.com/media/upload/Dental-SG-Resin-Guide-cover.jpg" alt="Resina Dental">
+                    <div class="content-card">
+                        <div class="card-image">
+                            <img src="../img/resina-dental.svg" alt="Resina Dental">
                         </div>
-                        <div class="material-details">
+                        <div class="card-details">
                             <h3>Resina Dental</h3>
-                            <div class="material-properties">
-                                <div class="property">
+                            <div class="properties-grid">
+                                <div class="property-item">
                                     <span class="property-name">Resolução:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -568,7 +435,7 @@
                                         <i class="fas fa-star"></i>
                                     </span>
                                 </div>
-                                <div class="property">
+                                <div class="property-item">
                                     <span class="property-name">Biocompatibilidade:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -578,7 +445,7 @@
                                         <i class="fas fa-star"></i>
                                     </span>
                                 </div>
-                                <div class="property">
+                                <div class="property-item">
                                     <span class="property-name">Durabilidade:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -589,7 +456,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <p class="material-description">Resina biocompatível desenvolvida especificamente para aplicações odontológicas. Permite a produção de guias cirúrgicos, modelos e alinhadores.</p>
+                            <p class="card-description">Resina biocompatível desenvolvida especificamente para aplicações odontológicas. Permite a produção de guias cirúrgicos, modelos e alinhadores.</p>
                             <div class="material-applications">
                                 <h4>Aplicações ideais:</h4>
                                 <ul>
@@ -605,19 +472,19 @@
             </div>
         </section>
 
-        <section id="special" class="material-list">
+        <section id="special" class="content-section">
             <div class="container">
-                <h2>Materiais Especiais</h2>
+                <h2 class="section-title">Materiais Especiais</h2>
                 
-                <div class="materials-grid">
-                    <div class="material-card">
-                        <div class="material-image">
-                            <img src="https://markforged.com/resources/blog/media/12590/3d-printed-carbon-fiber-parts.jpg" alt="Nylon com Fibra de Carbono">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <div class="card-image">
+                            <img src="../img/material-fibra-carbono.svg" alt="Nylon com Fibra de Carbono">
                         </div>
-                        <div class="material-details">
+                        <div class="card-details">
                             <h3>Nylon com Fibra de Carbono</h3>
-                            <div class="material-properties">
-                                <div class="property">
+                            <div class="properties-grid">
+                                <div class="property-item">
                                     <span class="property-name">Resistência:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -627,7 +494,7 @@
                                         <i class="fas fa-star"></i>
                                     </span>
                                 </div>
-                                <div class="property">
+                                <div class="property-item">
                                     <span class="property-name">Rigidez:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -637,7 +504,7 @@
                                         <i class="fas fa-star"></i>
                                     </span>
                                 </div>
-                                <div class="property">
+                                <div class="property-item">
                                     <span class="property-name">Peso:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -648,7 +515,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <p class="material-description">Material composto de nylon reforçado com fibra de carbono, oferecendo excepcional resistência e leveza. Ideal para peças de alto desempenho.</p>
+                            <p class="card-description">Material composto de nylon reforçado com fibra de carbono, oferecendo excepcional resistência e leveza. Ideal para peças de alto desempenho.</p>
                             <div class="material-applications">
                                 <h4>Aplicações ideais:</h4>
                                 <ul>
@@ -661,14 +528,14 @@
                         </div>
                     </div>
                     
-                    <div class="material-card">
-                        <div class="material-image">
-                            <img src="https://3dsolved.com/wp-content/uploads/2023/01/TPU-Parts.jpg" alt="TPU Flexível">
+                    <div class="content-card">
+                        <div class="card-image">
+                            <img src="../img/material-tpu.svg" alt="TPU Flexível">
                         </div>
-                        <div class="material-details">
+                        <div class="card-details">
                             <h3>TPU Flexível</h3>
-                            <div class="material-properties">
-                                <div class="property">
+                            <div class="properties-grid">
+                                <div class="property-item">
                                     <span class="property-name">Flexibilidade:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -678,7 +545,7 @@
                                         <i class="fas fa-star"></i>
                                     </span>
                                 </div>
-                                <div class="property">
+                                <div class="property-item">
                                     <span class="property-name">Elasticidade:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -688,7 +555,7 @@
                                         <i class="fas fa-star"></i>
                                     </span>
                                 </div>
-                                <div class="property">
+                                <div class="property-item">
                                     <span class="property-name">Resistência ao Impacto:</span>
                                     <span class="property-rating">
                                         <i class="fas fa-star"></i>
@@ -699,7 +566,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <p class="material-description">Material termoplástico altamente flexível, similar à borracha. Indicado para peças que necessitam de elasticidade e resistência ao impacto.</p>
+                            <p class="card-description">Material termoplástico altamente flexível, similar à borracha. Indicado para peças que necessitam de elasticidade e resistência ao impacto.</p>
                             <div class="material-applications">
                                 <h4>Aplicações ideais:</h4>
                                 <ul>
@@ -737,7 +604,7 @@
                     <a href="contato.html" class="btn primary">Solicitar Consultoria de Materiais</a>
                 </div>
                 <div class="consultation-image">
-                    <img src="https://imgs.search.brave.com/lL9XbM1XkA1eDwBitIkYjWxVJ05A1Q0xT9tSl8tC0GM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTI5/NDc1NjkxMi9waG90/by9lbmdpbmVlci1l/eHBsYWluaW5nLWFi/b3V0LW1hdGVyaWFs/cy11c2VkLWluLTNk/LXByaW50aW5nLXRl/Y2hub2xvZ3kuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPVFf/Nm5vZjlIdWVvQmls/cklJV0dyTlFVeGN1/WTFFZDNrSDdOX3Rq/dHBURmM9" alt="Consultoria especializada de materiais">
+                    <img src="../img/consultoria-materiais.svg" alt="Consultoria especializada de materiais">
                 </div>
             </div>
         </section>
@@ -750,6 +617,5 @@
     <script src="../js/main.js"></script>
     <script src="../js/header.js"></script>
     <script src="../js/footer.js"></script>
-    <script src="../js/main.js"></script>
 </body>
 </html> 

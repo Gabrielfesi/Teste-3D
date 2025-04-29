@@ -1,0 +1,19 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#f0f0f0"/>
+  
+  <!-- Rolo de filamento PLA -->
+  <circle cx="200" cy="200" r="120" fill="#3498db"/>
+  <circle cx="200" cy="200" r="40" fill="#f0f0f0"/>
+  
+  <!-- Representação de camadas -->
+  <rect x="200" y="80" width="120" height="10" fill="#2980b9"/>
+  <rect x="200" y="100" width="120" height="10" fill="#2980b9"/>
+  <rect x="200" y="120" width="120" height="10" fill="#2980b9"/>
+  <rect x="200" y="140" width="120" height="10" fill="#2980b9"/>
+  
+  <!-- Filamento saindo -->
+  <path d="M 320 110 C 340 110, 350 150, 360 180" stroke="#3498db" stroke-width="8" fill="none"/>
+  
+  <text x="200" y="350" font-family="Arial" font-size="24" text-anchor="middle" fill="#333">PLA</text>
+  <text x="200" y="380" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Ácido Polilático</text>
+</svg> 

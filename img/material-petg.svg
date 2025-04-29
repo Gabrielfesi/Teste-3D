@@ -1,0 +1,25 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#f0f0f0"/>
+  
+  <!-- Rolo de filamento PETG -->
+  <circle cx="200" cy="200" r="120" fill="#2ecc71"/>
+  <circle cx="200" cy="200" r="40" fill="#f0f0f0"/>
+  
+  <!-- Representação de transparência -->
+  <path d="M 200 80 L 320 80 L 320 320 L 200 320" fill="none" stroke="#27ae60" stroke-width="4" stroke-dasharray="10,5"/>
+  <rect x="240" y="120" width="40" height="160" fill="#27ae60" fill-opacity="0.3"/>
+  
+  <!-- Representação de resistência química -->
+  <circle cx="120" cy="120" r="20" fill="#27ae60"/>
+  <text x="120" cy="125" font-family="Arial" font-size="12" text-anchor="middle" fill="white">H₂O</text>
+  <circle cx="120" cy="170" r="20" fill="#27ae60"/>
+  <text x="120" cy="175" font-family="Arial" font-size="12" text-anchor="middle" fill="white">OH</text>
+  
+  <!-- Propriedades -->
+  <rect x="100" y="280" width="200" height="20" rx="5" fill="#27ae60"/>
+  <text x="200" y="295" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Resistência Química</text>
+  
+  <text x="200" y="330" font-family="Arial" font-size="24" text-anchor="middle" fill="#333">PETG</text>
+  <text x="200" y="360" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">Polietileno Tereftalato de Glicol</text>
+  <text x="200" y="380" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">Resistente e Transparente</text>
+</svg> 

@@ -1,0 +1,31 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#f0f0f0"/>
+  
+  <!-- Frasco de resina -->
+  <rect x="130" y="100" width="140" height="200" rx="10" fill="#3498db"/>
+  <rect x="140" y="80" width="120" height="20" rx="5" fill="#2980b9"/>
+  <rect x="190" y="60" width="20" height="20" fill="#2980b9"/>
+  
+  <!-- Dente impresso -->
+  <path d="M 300,300 C 320,280 320,250 300,230 C 280,210 270,220 260,230 C 250,220 240,210 220,230 C 200,250 200,280 220,300 C 240,320 250,310 260,300 C 270,310 280,320 300,300 Z" fill="white" stroke="#2980b9" stroke-width="2"/>
+  <path d="M 260,230 L 260,300" stroke="#2980b9" stroke-width="1" stroke-dasharray="3,2"/>
+  <path d="M 220,265 L 300,265" stroke="#2980b9" stroke-width="1" stroke-dasharray="3,2"/>
+  
+  <!-- Mais dentes -->
+  <circle cx="90" cy="260" r="25" fill="white" stroke="#2980b9" stroke-width="2"/>
+  <circle cx="90" cy="310" r="20" fill="white" stroke="#2980b9" stroke-width="2"/>
+  <circle cx="130" cy="330" r="15" fill="white" stroke="#2980b9" stroke-width="2"/>
+  
+  <!-- Efeito de transparência -->
+  <rect x="170" y="150" width="60" height="100" fill="#3498db" fill-opacity="0.5"/>
+  
+  <!-- Símbolo dentário -->
+  <circle cx="200" cy="260" r="15" fill="#3498db" fill-opacity="0.7"/>
+  <path d="M 190,260 L 210,260 M 200,250 L 200,270" stroke="white" stroke-width="2"/>
+  
+  <!-- Rótulo do frasco -->
+  <rect x="145" y="180" width="110" height="40" rx="5" fill="white"/>
+  <text x="200" y="205" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Dental</text>
+  
+  <text x="200" y="50" font-family="Arial" font-size="18" text-anchor="middle" fill="#333">Resina Dental</text>
+</svg> 

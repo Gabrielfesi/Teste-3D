@@ -1,0 +1,276 @@
+/* Estilos Responsivos para o Site de Impressões 3D */
+
+/* Tablets e Dispositivos Médios */
+@media (max-width: 992px) {
+    /* Ajustes gerais */
+    .container {
+        padding: 0 15px;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    /* Ajustes para a barra de navegação */
+    header .container {
+        padding: 10px 15px;
+    }
+    
+    /* Hero e banners */
+    .hero h2 {
+        font-size: 2.8rem;
+    }
+    
+    .page-hero .container,
+    .featured-section .container {
+        flex-direction: column;
+    }
+    
+    .page-hero-image,
+    .featured-image {
+        margin-top: 2rem;
+        order: 2;
+    }
+    
+    .page-hero-content,
+    .featured-content {
+        order: 1;
+    }
+    
+    /* Grid de projetos */
+    .content-grid .container {
+        padding: 0 10px;
+    }
+    
+    .content-card {
+        margin-bottom: 20px;
+    }
+    
+    /* Seção de filtros */
+    .filter-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .filter-btn {
+        margin: 5px;
+    }
+    
+    /* Highlights */
+    .project-highlights {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* Dispositivos móveis - paisagem */
+@media (max-width: 768px) {
+    /* Ajustes gerais */
+    section {
+        padding: 3rem 0;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Navegação móvel */
+    .mobile-menu-toggle {
+        display: block !important;
+        position: relative;
+        z-index: 50;
+    }
+    
+    nav.desktop-nav {
+        display: none !important;
+    }
+    
+    /* Header ajustes */
+    header .container {
+        position: relative;
+    }
+    
+    /* Menu móvel */
+    .mobile-nav {
+        background-color: rgba(0, 0, 0, 0.95);
+        z-index: 2000;
+    }
+    
+    .mobile-nav.active {
+        display: flex !important;
+    }
+    
+    .mobile-nav a {
+        padding: 10px 0;
+        display: block;
+        width: 100%;
+    }
+    
+    /* Hero e banners */
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Grid de conteúdo */
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Seção de filtros */
+    .filter-controls h2 {
+        font-size: 1.2rem;
+    }
+    
+    .filter-buttons {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    .filter-btn {
+        flex: 0 0 auto;
+    }
+
+    /* Projetos contador */
+    .projects-counter {
+        font-size: 0.9rem;
+    }
+    
+    /* Cards de projeto */
+    .card-details h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Highlights */
+    .project-highlights {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Depoimentos */
+    .testimonial-content blockquote {
+        font-size: 1rem;
+    }
+}
+
+/* Dispositivos móveis - retrato */
+@media (max-width: 576px) {
+    /* Ajustes gerais */
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    /* Logo */
+    .logo h1 {
+        font-size: 1.4rem;
+    }
+    
+    /* Hero */
+    .hero {
+        padding: 4rem 0;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    /* Grid de conteúdo */
+    .card-image {
+        height: 200px;
+    }
+    
+    /* Especificações de projetos */
+    .project-specs {
+        padding: 0.8rem;
+    }
+    
+    .spec {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .property-name, .property-value {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    /* Seção de destaque */
+    .featured-section {
+        padding: 2rem 0;
+    }
+    
+    .featured-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .featured-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-col {
+        margin-bottom: 30px;
+    }
+    
+    /* Botão WhatsApp */
+    .whatsapp-button a {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .whatsapp-button a i {
+        font-size: 1.5rem;
+    }
+}
+
+/* Suporte para telas muito pequenas */
+@media (max-width: 375px) {
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .card-details {
+        padding: 1rem;
+    }
+    
+    .card-details h3 {
+        font-size: 1.1rem;
+    }
+    
+    .card-description {
+        font-size: 0.9rem;
+    }
+} 

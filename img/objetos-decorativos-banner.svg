@@ -1,0 +1,26 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#f0f0f0"/>
+  
+  <!-- Fundo -->
+  <rect x="50" y="50" width="700" height="300" rx="10" fill="#ecf0f1"/>
+  
+  <!-- Vaso moderno -->
+  <path d="M 150 150 L 180 100 L 220 100 L 250 150 C 250 150, 250 250, 200 250 C 150 250, 150 150, 150 150" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <path d="M 180 100 L 220 100 L 250 150 L 150 150" fill="#2980b9" stroke="#2980b9" stroke-width="1"/>
+  <ellipse cx="200" cy="250" rx="50" ry="10" fill="#2980b9"/>
+  
+  <!-- Luminária -->
+  <rect x="350" y="250" width="100" height="10" rx="2" fill="#7f8c8d"/>
+  <rect x="390" y="200" width="20" height="50" fill="#7f8c8d"/>
+  <path d="M 330 200 C 330 180, 380 150, 400 150 C 420 150, 470 180, 470 200" fill="#f1c40f" stroke="#f39c12" stroke-width="2"/>
+  <path d="M 330 200 L 470 200" stroke="#f39c12" stroke-width="2"/>
+  <ellipse cx="400" cy="150" rx="20" ry="10" fill="#f39c12"/>
+  
+  <!-- Escultura abstrata -->
+  <rect x="550" y="250" width="150" height="10" rx="2" fill="#95a5a6"/>
+  <path d="M 600 250 L 600 200 L 560 150 L 620 120 L 650 180 L 630 200 L 630 250" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <path d="M 620 120 L 680 80 L 690 130 L 650 180" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <ellipse cx="680" cy="80" rx="15" ry="10" fill="#8e44ad"/>
+  
+  <text x="400" y="350" font-family="Arial" font-size="24" text-anchor="middle" fill="#333">Objetos Decorativos</text>
+</svg> 

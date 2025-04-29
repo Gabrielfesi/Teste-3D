@@ -1,0 +1,28 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#f0f0f0"/>
+  
+  <!-- Fundo -->
+  <rect x="50" y="50" width="700" height="300" rx="10" fill="#ecf0f1"/>
+  
+  <!-- Material flexível -->
+  <rect x="100" y="100" width="120" height="40" fill="#3498db" rx="5"/>
+  <path d="M 100 120 C 130 150, 170 90, 220 120" stroke="#3498db" stroke-width="20" fill="none"/>
+  <text x="160" y="250" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Material Flexível</text>
+  
+  <!-- Material com metal -->
+  <rect x="300" y="100" width="100" height="100" fill="#bdc3c7" rx="5"/>
+  <circle cx="350" cy="150" r="35" fill="#7f8c8d"/>
+  <circle cx="350" cy="150" r="25" fill="#95a5a6"/>
+  <circle cx="350" cy="150" r="15" fill="#bdc3c7"/>
+  <text x="350" y="250" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Metal Composto</text>
+  
+  <!-- Material térmico -->
+  <rect x="500" y="100" width="100" height="100" fill="#e74c3c" rx="5"/>
+  <path d="M 525 120 L 575 120 L 575 170 L 525 170 Z" fill="#c0392b"/>
+  <path d="M 535 130 L 565 130 L 565 160 L 535 160 Z" fill="#e74c3c"/>
+  <path d="M 500 110 L 530 80 L 570 80 L 600 110" fill="none" stroke="#c0392b" stroke-width="5"/>
+  <path d="M 510 170 L 500 200 L 600 200 L 590 170" fill="none" stroke="#c0392b" stroke-width="5"/>
+  <text x="550" y="250" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Material Térmico</text>
+  
+  <text x="400" y="350" font-family="Arial" font-size="24" text-anchor="middle" fill="#333">Materiais Especiais</text>
+</svg> 

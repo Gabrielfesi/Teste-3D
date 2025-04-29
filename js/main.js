@@ -1,22 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Menu responsivo para dispositivos móveis
     const setupMobileMenu = () => {
-        const header = document.querySelector('header');
-        
-        if (header) {
-            const hamburgerBtn = document.createElement('div');
-            hamburgerBtn.className = 'hamburger-menu';
-            hamburgerBtn.innerHTML = '<span></span><span></span><span></span>';
-            
-            header.querySelector('.container').insertBefore(
-                hamburgerBtn, 
-                header.querySelector('.cart-user')
-            );
-            
-            hamburgerBtn.addEventListener('click', function() {
-                this.classList.toggle('active');
-                header.querySelector('nav').classList.toggle('active');
-            });
+        // Desativado para usar a nova implementação
+        console.log("Usando implementação moderna do menu mobile");
+        // Verificamos se já existe uma implementação nova
+        if (document.querySelector('.mobile-menu-toggle') || document.getElementById('mobile-nav')) {
+            return; // Não cria menu duplicado
         }
     };
     
@@ -256,6 +245,64 @@ document.addEventListener('DOMContentLoaded', function() {
         // Revelar os elementos visíveis na carga inicial
         reveal();
     };
+    
+    // Função para inicializar o menu mobile manualmente
+    function initMobileMenu() {
+        // Verifica se os elementos do menu mobile existem
+        const mobileNav = document.getElementById('mobile-nav');
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        
+        if (!mobileNav) {
+            console.error('Elemento do menu mobile não encontrado');
+            return;
+        }
+        
+        // Adiciona botão de menu se não existir
+        if (!mobileToggle) {
+            const headerContainer = document.querySelector('header .container');
+            if (headerContainer) {
+                const toggle = document.createElement('div');
+                toggle.className = 'mobile-menu-toggle';
+                toggle.innerHTML = '<i class="fas fa-bars"></i>';
+                headerContainer.appendChild(toggle);
+                
+                // Adiciona evento de clique
+                toggle.addEventListener('click', function() {
+                    mobileNav.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+                
+                console.log('Botão de menu mobile criado via main.js');
+            }
+        }
+        
+        // Adiciona evento ao botão de fechar
+        const closeButton = document.querySelector('.close-menu');
+        if (closeButton) {
+            closeButton.addEventListener('click', function() {
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+    }
+    
+    // Verifica se o menu mobile está funcionando após 1 segundo
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            // Verifica se o menu mobile está visível em telas pequenas
+            if (window.innerWidth <= 768 && !document.querySelector('.mobile-menu-toggle')) {
+                console.log('Inicializando menu mobile através do fallback');
+                initMobileMenu();
+            }
+            
+            // Remove quaisquer elementos de hamburguer antigos que possam causar conflito
+            const oldHamburger = document.querySelector('.hamburger-menu');
+            if (oldHamburger) {
+                oldHamburger.remove();
+                console.log('Removido hamburguer antigo para evitar conflitos');
+            }
+        }, 1000);
+    });
     
     // Inicializar todas as funcionalidades
     setupMobileMenu();
